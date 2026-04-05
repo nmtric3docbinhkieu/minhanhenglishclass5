@@ -1,0 +1,532 @@
+Tôi cần bạn xây dựng một webapp hoàn chỉnh, có thể deploy lên Vercel, với tên gọi "English 5 - Global Success - Học kỳ 2".
+
+## MỤC ĐÍCH:
+Dành cho học sinh lớp 5 (nữ, 11 tuổi) rất yếu tiếng Anh, cần ôn thi học kỳ 2 vào ngày 11/5/2026 (còn 35 ngày). Mỗi tối học 45 phút.
+
+## YÊU CẦU GIAO DIỆN:
+- Màu sắc: Hồng pastel chủ đạo (#F9E7E7, #FADADD, #FFF0F5). Nút bấm màu hồng đào (#FFB7B2). Chữ viết tay nhẹ nhàng.
+- Font: 'Comic Neue', 'Quicksand', 'Poppins'.
+- Phong cách: Bo góc lớn (24px), bóng đổ mềm, hiệu ứng hover nhẹ.
+- Responsive: Hoạt động tốt trên iPad và điện thoại.
+- Hiển thị đồng hồ đếm ngược đến ngày 11/5/2026 trên đầu trang.
+
+## CẤU TRÚC WEBAPP (GỒM 4 TAB CHÍNH):
+
+### TAB 1: HỌC THEO LỘ TRÌNH (Roadmap)
+Hiển thị 35 ngày (từ hôm nay đến 11/5). Mỗi ngày là 1 card nhỏ, khi click vào sẽ hiện nội dung học của ngày đó. Ngày nào đã học xong có thể đánh dấu tick.
+
+### TAB 2: UNIT CẦN HỌC (7 Unit)
+Hiển thị 7 Unit theo thứ tự ưu tiên:
+1. Unit 16 - Seasons and Weather (🔴 quan trọng nhất)
+2. Unit 14+15 - Health (🔴 quan trọng nhất)
+3. Unit 18 - Means of Transport (🟡 quan trọng vừa)
+4. Unit 19 - Places of Interest (🟡 quan trọng vừa)
+5. Unit 20 - Summer Holidays (🟢 bình thường)
+6. Unit 11 - Family Time (🟢 bình thường)
+
+Mỗi Unit khi click vào có 2 phần:
+- **Flashcard**: Học từ vựng (có phiên âm IPA, nghĩa tiếng Việt, ví dụ, nút phát âm dùng Web Speech API)
+- **Trắc nghiệm**: 8 câu hỏi, mỗi câu có giải thích chi tiết bằng tiếng Việt (kể cả đúng hay sai)
+
+### TAB 3: THI THỬ (Mock Test)
+Đề thi học kỳ 2 gồm 25 câu (đã được rút gọn từ 30 câu để phù hợp với học sinh yếu). Gồm 3 phần:
+- Phần A: Ngữ âm (5 câu)
+- Phần B: Từ vựng và ngữ pháp (12 câu)
+- Phần C: Đọc hiểu (8 câu - 2 đoạn văn ngắn)
+
+Sau khi nộp bài: Hiển thị điểm số, số câu đúng/sai, và giải thích từng câu.
+
+### TAB 4: SỔ TAY LỖI SAI
+Tự động lưu lại những câu trắc nghiệm con làm sai. Con có thể xem lại, làm lại, và xem giải thích. Dùng localStorage.
+
+## DỮ LIỆU HỌC TẬP (CUNG CẤP ĐẦY ĐỦ BÊN DƯỚI):
+
+### UNIT 16: SEASONS AND WEATHER
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| spring | /sprɪŋ/ | mùa xuân | It's warm in spring. |
+| summer | /ˈsʌmər/ | mùa hè | It's hot in summer. |
+| autumn | /ˈɔːtəm/ | mùa thu | It's cool in autumn. |
+| winter | /ˈwɪntər/ | mùa đông | It's cold in winter. |
+| warm | /wɔːrm/ | ấm áp | Spring is warm. |
+| hot | /hɒt/ | nóng | Summer is hot. |
+| cool | /kuːl/ | mát mẻ | Autumn is cool. |
+| cold | /koʊld/ | lạnh | Winter is cold. |
+| cloudy | /ˈklaʊdi/ | nhiều mây | It's cloudy today. |
+| sunny | /ˈsʌni/ | nắng | It's sunny in summer. |
+| rainy | /ˈreɪni/ | mưa | Spring is rainy. |
+| jumper | /ˈdʒʌmpər/ | áo len | I wear a jumper. |
+| jeans | /dʒiːnz/ | quần jean | Jeans are warm. |
+| coat | /koʊt/ | áo khoác | Wear a coat in winter. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. How's the weather in summer?
+   A. It's warm. B. It's hot. C. It's cold.
+   Đáp án: B
+   Giải thích: Mùa hè (summer) thời tiết nóng (hot). Trong bài học: "Summer is hot and sunny."
+
+2. What do you usually wear in winter?
+   A. Shorts and a T-shirt B. A jumper and jeans C. A dress
+   Đáp án: B
+   Giải thích: Mùa đông (winter) lạnh nên mặc áo len (jumper) và quần jean (jeans). Đáp án A là mùa hè, C là mùa thu/xuân.
+
+3. How's the weather in autumn?
+   A. Warm and rainy B. Hot and sunny C. Cool and cloudy
+   Đáp án: C
+   Giải thích: Mùa thu (autumn) thời tiết mát mẻ (cool) và thường có mây (cloudy). Bài hát trong sách: "Autumn is cool and cloudy."
+
+4. What does "humid" mean?
+   A. Khô ráo B. Ẩm ướt C. Lạnh giá
+   Đáp án: B
+   Giải thích: "Humid" có nghĩa là ẩm ướt (không khí nhiều hơi nước). Mùa xuân ở Việt Nam thường ẩm ướt (warm and humid).
+
+5. Chọn câu đúng ngữ pháp:
+   A. I wear jeans in winter. B. I wear jeans on winter. C. I wear jeans at winter.
+   Đáp án: A
+   Giải thích: Dùng giới từ "in" + mùa (in spring, in summer, in autumn, in winter). "In winter" mới đúng.
+
+6. What season is it in Sydney when it's summer in Viet Nam?
+   A. Spring B. Summer C. Winter
+   Đáp án: C
+   Giải thích: Việt Nam ở Bắc bán cầu, Úc (Sydney) ở Nam bán cầu. Hai bán cầu có mùa ngược nhau. Khi Việt Nam mùa hè thì Sydney mùa đông (winter).
+
+7. Dịch: "It's cloudy in autumn."
+   A. Mùa thu thì lạnh. B. Mùa thu thì nhiều mây. C. Mùa thu thì mưa.
+   Đáp án: B
+   Giải thích: "Cloudy" = nhiều mây, có mây. "Autumn" = mùa thu. Vậy câu có nghĩa "Mùa thu thì nhiều mây."
+
+8. What should you wear on a hot day?
+   A. A coat B. A jumper C. Shorts and a T-shirt
+   Đáp án: C
+   Giải thích: Ngày nóng (hot day) nên mặc quần short và áo phông (shorts and T-shirt) để mát mẻ. Coat và jumper là đồ mặc khi lạnh.
+
+---
+
+### UNIT 14+15: HEALTH (Staying healthy + Our health)
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| headache | /ˈhedeɪk/ | đau đầu | I have a headache. |
+| toothache | /ˈtuːθeɪk/ | đau răng | I have a toothache. |
+| sore throat | /sɔːr θroʊt/ | đau họng | I have a sore throat. |
+| fever | /ˈfiːvər/ | sốt | I have a fever. |
+| should | /ʃʊd/ | nên | You should rest. |
+| shouldn't | /ˈʃʊdnt/ | không nên | You shouldn't eat ice cream. |
+| exercise | /ˈeksərsaɪz/ | tập thể dục | Do exercise every day. |
+| dentist | /ˈdentɪst/ | nha sĩ | Go to the dentist. |
+| doctor | /ˈdɒktər/ | bác sĩ | See a doctor. |
+| medicine | /ˈmedsn/ | thuốc | Take medicine. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. What's the matter with you? (đau đầu)
+   A. I have a toothache. B. I have a headache. C. I have a sore throat.
+   Đáp án: B
+   Giải thích: "Headache" là đau đầu. "Toothache" là đau răng. "Sore throat" là đau họng. Câu hỏi yêu cầu đau đầu nên chọn "headache".
+
+2. What should you do when you have a toothache?
+   A. Go to the dentist B. Watch TV C. Eat ice cream
+   Đáp án: A
+   Giải thích: Khi đau răng (toothache), bạn nên (should) đi nha sĩ (go to the dentist). Không nên ăn kem vì càng đau hơn.
+
+3. Chọn từ đúng: "You ___ watch too much TV when you have a headache."
+   A. should B. shouldn't C. must
+   Đáp án: B
+   Giải thích: Đau đầu không nên (shouldn't) xem TV nhiều vì sẽ mỏi mắt và đau đầu hơn. "Shouldn't" = không nên.
+
+4. How does Peter stay healthy? (theo bài đọc Unit 14)
+   A. He eats fast food. B. He eats fish and vegetables. C. He drinks soda.
+   Đáp án: B
+   Giải thích: Trong bài "Peter's healthy lifestyle", Peter ăn cá và rau (fish and vegetables), uống nước và nước ép trái cây. Không ăn đồ ăn nhanh.
+
+5. How often does Peter do judo?
+   A. Once a week B. Twice a week C. Every day
+   Đáp án: B
+   Giải thích: Bài đọc: "He does judo on Tuesdays and Thursdays." → Mỗi tuần 2 lần (twice a week).
+
+6. Dịch: "You should rinse your mouth with salt water."
+   A. Bạn nên súc miệng bằng nước muối. B. Bạn nên đánh răng mỗi ngày. C. Bạn nên uống nước ấm.
+   Đáp án: A
+   Giải thích: "Rinse your mouth" = súc miệng, "salt water" = nước muối. Đây là lời khuyên khi bị đau răng hoặc đau họng.
+
+7. What does "I'm not very well" mean?
+   A. Tôi rất khỏe B. Tôi không được khỏe lắm C. Tôi bị ốm nặng
+   Đáp án: B
+   Giải thích: "Not very well" = không được khỏe lắm (hơi mệt, hơi ốm). Đây là cách nói nhẹ nhàng hơn "I'm sick".
+
+8. Chọn đáp án đúng: "A: What's the matter? B: I have a ___. I can't eat anything."
+   A. headache B. toothache C. sore throat
+   Đáp án: C
+   Giải thích: Đau họng (sore throat) gây khó nuốt, không thể ăn gì (can't eat anything). Đau đầu hoặc đau răng không ảnh hưởng đến việc nuốt nhiều.
+
+---
+
+### UNIT 18: MEANS OF TRANSPORT
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| bus | /bʌs/ | xe buýt | I go by bus. |
+| taxi | /ˈtæksi/ | xe taxi | Take a taxi. |
+| bicycle | /ˈbaɪsɪkl/ | xe đạp | Go by bicycle. |
+| on foot | /ɒn fʊt/ | đi bộ | I go on foot. |
+| train | /treɪn/ | tàu hỏa | Travel by train. |
+| ferry | /ˈferi/ | phà | Take a ferry. |
+| Dragon Bridge | /ˈdræɡən brɪdʒ/ | Cầu Rồng | Visit Dragon Bridge. |
+| Opera House | /ˈɒprə haʊs/ | Nhà hát Opera | Ha Noi Opera House. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. How can I get to Hoan Kiem Lake?
+   A. You can get there by bus. B. You can get there on foot. C. Both A and B.
+   Đáp án: C
+   Giải thích: Hồ Hoàn Kiếm ở trung tâm Hà Nội, có thể đi bằng xe buýt (by bus) hoặc đi bộ (on foot) nếu ở gần. Cả hai đều đúng.
+
+2. "Where do you want to visit?" có nghĩa là gì?
+   A. Bạn muốn đi đâu? B. Bạn đã đi đâu? C. Bạn sẽ đi đâu?
+   Đáp án: A
+   Giải thích: "Where" = ở đâu, "do you want to visit" = bạn muốn tham quan. Hỏi về mong muốn ở hiện tại.
+
+3. Chọn đáp án đúng: "I want to visit ___." (Cầu Rồng ở Đà Nẵng)
+   A. Ha Noi Opera House B. Dragon Bridge C. Ngo Mon Square
+   Đáp án: B
+   Giải thích: Dragon Bridge (Cầu Rồng) là địa danh nổi tiếng ở Đà Nẵng. Opera House ở Hà Nội, Ngo Mon Square ở Huế.
+
+4. How can I get to Dam Sen Water Park?
+   A. You can get there by bicycle. B. You can get there by taxi. C. You can get there on foot.
+   Đáp án: B
+   Giải thích: Công viên nước Đầm Sen ở Thành phố Hồ Chí Minh, thường đi bằng taxi hoặc xe buýt. Đi xe đạp hoặc đi bộ thường không khả thi vì xa.
+
+5. "Excuse me! I'm lost." có nghĩa là gì?
+   A. Làm ơn! Tôi bị lạc. B. Làm ơn! Tôi mệt. C. Làm ơn! Tôi đói.
+   Đáp án: A
+   Giải thích: "I'm lost" = tôi bị lạc. Đây là câu dùng khi không biết đường.
+
+6. What does "on foot" mean?
+   A. Đi xe đạp B. Đi bộ C. Đi xe buýt
+   Đáp án: B
+   Giải thích: "On foot" có nghĩa là đi bộ, dùng đôi chân của mình.
+
+7. Is it far from here? – "No, it isn't." có nghĩa là:
+   A. Có, nó xa. B. Không, nó không xa. C. Tôi không biết.
+   Đáp án: B
+   Giải thích: "No, it isn't" là câu trả lời phủ định cho câu hỏi "Is it far?" (Có xa không?) → Không, nó không xa.
+
+8. Chọn câu hỏi đúng khi muốn hỏi đường đến bảo tàng:
+   A. How can I get to the museum? B. Where is the museum go? C. What museum is it?
+   Đáp án: A
+   Giải thích: "How can I get to...?" là mẫu câu chuẩn để hỏi đường đến một địa điểm.
+
+---
+
+### UNIT 19: PLACES OF INTEREST
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| beautiful | /ˈbjuːtɪfl/ | đẹp | The beach is beautiful. |
+| exciting | /ɪkˈsaɪtɪŋ/ | thú vị, hấp dẫn | The trip is exciting. |
+| fantastic | /fænˈtæstɪk/ | tuyệt vời | Ha Long Bay is fantastic. |
+| peaceful | /ˈpiːsfl/ | yên bình | The village is peaceful. |
+| kilometre | /kɪˈlɒmɪtər/ | ki-lô-mét | It's 10 kilometres. |
+| far | /fɑːr/ | xa | Is it far? |
+| near | /nɪr/ | gần | It's near here. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. What do you think of Ha Long Bay?
+   A. I think it's boring. B. I think it's fantastic. C. I think it's noisy.
+   Đáp án: B
+   Giải thích: Vịnh Hạ Long là danh lam thắng cảnh nổi tiếng, tuyệt đẹp. "Fantastic" (tuyệt vời) là từ phù hợp nhất.
+
+2. "How far is it from Da Nang to Hoi An?" có nghĩa là gì?
+   A. Từ Đà Nẵng đến Hội An có xa không? B. Từ Đà Nẵng đến Hội An bao xa? C. Đà Nẵng ở gần Hội An phải không?
+   Đáp án: B
+   Giải thích: "How far" dùng để hỏi về khoảng cách (bao xa). Câu hỏi đầy đủ là "How far is it from A to B?"
+
+3. It's about 29 kilometres from Da Nang to Hoi An. Số 29 đọc là:
+   A. Twenty nine B. Twenty-nine C. Both A and B
+   Đáp án: C
+   Giải thích: Số 29 được viết là "twenty-nine" hoặc "twenty nine". Cả hai cách đều chấp nhận được.
+
+4. What does "peaceful" mean?
+   A. Ồn ào B. Yên bình C. Đông đúc
+   Đáp án: B
+   Giải thích: "Peaceful" có nghĩa là yên bình, tĩnh lặng, không ồn ào.
+
+5. Chọn câu đúng:
+   A. What do you think of Sydney Opera House? B. What you think of Sydney Opera House? C. What do you think Sydney Opera House?
+   Đáp án: A
+   Giải thích: Mẫu câu đúng là "What do you think of + địa điểm?" (Bạn nghĩ gì về...?)
+
+6. How far is it from Ho Chi Minh City to Vung Tau? (khoảng 100km)
+   A. It's about 10 kilometres. B. It's about 100 kilometres. C. It's about 1000 kilometres.
+   Đáp án: B
+   Giải thích: Khoảng cách từ Sài Gòn đến Vũng Tàu thực tế khoảng 100km. Đây là kiến thức thực tế kết hợp với bài học.
+
+7. "I think it's exciting." – Từ "exciting" dùng để miêu tả:
+   A. Một nơi chán ngắt B. Một nơi thú vị, hấp dẫn C. Một nơi yên tĩnh
+   Đáp án: B
+   Giải thích: "Exciting" có nghĩa là thú vị, hấp dẫn, gây hứng thú.
+
+8. Dịch: "Why not plan a trip with your family?"
+   A. Tại sao không lên kế hoạch cho một chuyến đi cùng gia đình? B. Bạn có muốn đi du lịch không? C. Gia đình bạn sẽ đi đâu?
+   Đáp án: A
+   Giải thích: "Why not + động từ?" là cấu trúc gợi ý, có nghĩa là "Tại sao không...?"
+
+---
+
+### UNIT 20: OUR SUMMER HOLIDAYS
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| summer holiday | /ˈsʌmər ˈhɒlədeɪ/ | kỳ nghỉ hè | I love summer holiday. |
+| go camping | /ɡəʊ ˈkæmpɪŋ/ | đi cắm trại | We go camping. |
+| join a club | /dʒɔɪn ə klʌb/ | tham gia câu lạc bộ | Join a music club. |
+| practise swimming | /ˈpræktɪs ˈswɪmɪŋ/ | tập bơi | Practise swimming every day. |
+| visit a farm | /ˈvɪzɪt ə fɑːrm/ | thăm trang trại | Visit an eco-farm. |
+| Phu Quoc Island | /fuː kwɒk ˈaɪlənd/ | đảo Phú Quốc | Go to Phu Quoc. |
+| Phong Nha Cave | /fɒŋ nɑː keɪv/ | động Phong Nha | Explore Phong Nha Cave. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. Where are you going to visit this summer?
+   A. I go to Phu Quoc. B. I'm going to visit Phu Quoc. C. I went to Phu Quoc.
+   Đáp án: B
+   Giải thích: Câu hỏi dùng "are you going to" (tương lai gần) nên câu trả lời phải dùng "I'm going to visit". Đáp án A sai thì, C là quá khứ.
+
+2. What are you going to do this summer?
+   A. I'm going to go camping. B. I go camping. C. I went camping.
+   Đáp án: A
+   Giải thích: Tương tự câu 1, câu trả lời phải dùng "I'm going to + động từ" để chỉ dự định trong tương lai.
+
+3. "What are you going to do?" có nghĩa là gì?
+   A. Bạn đã làm gì? B. Bạn định làm gì? C. Bạn thích làm gì?
+   Đáp án: B
+   Giải thích: "Be going to" dùng để diễn tả dự định trong tương lai gần. "What are you going to do?" = Bạn định làm gì?
+
+4. Chọn đáp án đúng: "I'm going to ___ a music club."
+   A. join B. joins C. joining
+   Đáp án: A
+   Giải thích: Sau "going to" động từ luôn ở dạng nguyên thể (không thêm s, không thêm ing). "Join" là đúng.
+
+5. Where is Phong Nha Cave?
+   A. In Ha Noi B. In Quang Binh C. In Da Nang
+   Đáp án: B
+   Giải thích: Động Phong Nha thuộc tỉnh Quảng Bình, là di sản thiên nhiên thế giới.
+
+6. Dịch: "I grew vegetables on a farm with my grandparents."
+   A. Tôi đã trồng rau trong trang trại cùng ông bà. B. Tôi sẽ trồng rau trong trang trại. C. Tôi thích trồng rau.
+   Đáp án: A
+   Giải thích: "Grew" là quá khứ của "grow" (trồng). Câu nói về việc đã xảy ra trong quá khứ.
+
+7. What does "eco-farm" mean?
+   A. Trang trại thông thường B. Trang trại sinh thái C. Trang trại chăn nuôi
+   Đáp án: B
+   Giải thích: "Eco" là viết tắt của "ecological" (sinh thái). Eco-farm là trang trại sinh thái, thân thiện với môi trường.
+
+8. Chọn câu hỏi đúng cho câu trả lời: "I'm going to visit Phu Quoc Island."
+   A. Where are you going to visit? B. What are you going to do? C. When are you going?
+   Đáp án: A
+   Giải thích: Câu trả lời nói về địa điểm (Phu Quoc), vậy câu hỏi phải là "Where are you going to visit?" (Bạn định đi thăm đâu?)
+
+---
+
+### UNIT 11: FAMILY TIME
+
+**Từ vựng (Flashcard):**
+| Từ vựng | Phiên âm | Nghĩa tiếng Việt | Ví dụ |
+|---------|----------|------------------|-------|
+| beach | /biːtʃ/ | bãi biển | Go to the beach. |
+| swim | /swɪm/ | bơi | Swim in the sea. |
+| took photos | /tʊk ˈfəʊtəʊz/ | đã chụp ảnh | Took photos with dad. |
+| collect seashells | /kəˈlekt ˈsiːʃelz/ | nhặt vỏ sò | Collect seashells. |
+| walk on the beach | /wɔːk ɒn ðə biːtʃ/ | đi bộ trên bãi biển | Walk on the beach. |
+| souvenir | /ˌsuːvəˈnɪər/ | quà lưu niệm | Buy souvenirs. |
+| journey | /ˈdʒɜːni/ | hành trình | Long journey. |
+
+**Câu hỏi trắc nghiệm (8 câu):**
+
+1. Did you swim yesterday?
+   A. Yes, I swim. B. Yes, I did. C. Yes, I do.
+   Đáp án: B
+   Giải thích: Câu hỏi ở thì quá khứ đơn (Did you swim?), câu trả lời ngắn đúng là "Yes, I did" hoặc "No, I didn't".
+
+2. Where did your family go last Sunday?
+   A. We go to the beach. B. We went to the beach. C. We are going to the beach.
+   Đáp án: B
+   Giải thích: "Last Sunday" (Chủ nhật tuần trước) là dấu hiệu của thì quá khứ. Động từ "go" phải chia thành "went".
+
+3. What did Linda and her brother buy? (theo bài đọc Unit 11)
+   A. Seafood B. Souvenirs C. Photos
+   Đáp án: B
+   Giải thích: Đoạn văn: "Linda and her brother bought some souvenirs for their friends." Vậy họ mua quà lưu niệm (souvenirs).
+
+4. "Did you take photos with your father?" có nghĩa là gì?
+   A. Bạn đã bơi cùng bố phải không? B. Bạn đã chụp ảnh cùng bố phải không? C. Bạn đã đi bộ cùng bố phải không?
+   Đáp án: B
+   Giải thích: "Take photos" = chụp ảnh. "With your father" = cùng với bố của bạn.
+
+5. Chọn từ đúng: "A: Did you swim yesterday? B: Yes, I did. I ___ with my father."
+   A. swim B. swam C. swimming
+   Đáp án: B
+   Giải thích: Câu trả lời khẳng định ở thì quá khứ, động từ "swim" phải chia thành "swam".
+
+6. When did Linda's family take a boat trip?
+   A. On Saturday B. On Sunday C. On Monday
+   Đáp án: B
+   Giải thích: Đoạn văn: "On Sunday, they took a boat trip around the bay." → Vào Chủ nhật.
+
+7. Dịch: "The journey took a long time, but they had lots of fun."
+   A. Cuộc hành trình mất nhiều thời gian, nhưng họ đã có rất nhiều niềm vui.
+   B. Cuộc hành trình rất ngắn, nhưng họ không vui.
+   C. Họ không thích cuộc hành trình vì mất nhiều thời gian.
+   Đáp án: A
+   Giải thích: "Journey" = hành trình, "took a long time" = mất nhiều thời gian, "but" = nhưng, "had lots of fun" = có rất nhiều niềm vui.
+
+8. Từ nào khác loại? (động từ quá khứ)
+   A. swam B. took C. walk D. bought
+   Đáp án: C
+   Giải thích: "Swam", "took", "bought" đều là động từ ở thì quá khứ (V2). "Walk" là động từ hiện tại, thiếu "ed" để thành "walked".
+
+---
+
+## ĐỀ THI THỬ HỌC KỲ 2 (25 câu)
+
+### PHẦN A: NGỮ ÂM (5 câu)
+
+1. Chọn từ có phần gạch chân phát âm khác:
+   A. beach B. read C. weather D. mean
+   Đáp án: C
+   Giải thích: "beach" (/iː/), "read" (/iː/), "mean" (/iː/) có âm "ee" dài. "weather" (/e/) có âm "e" ngắn.
+
+2. Chọn từ có phần gạch chân phát âm khác:
+   A. summer B. winter C. spring D. autumn
+   Đáp án: D
+   Giải thích: "Summer, winter, spring" có âm /ɪ/ hoặc /ʌ/. "Autumn" có âm câm "n", cách phát âm đặc biệt /ˈɔːtəm/.
+
+3. Chọn từ có phần gạch chân phát âm khác:
+   A. hot B. cold C. go D. no
+   Đáp án: A
+   Giải thích: "Hot" có âm /ɒ/, "cold, go, no" có âm /əʊ/ (âu dài).
+
+4. Chọn từ có phần gạch chân phát âm khác:
+   A. bus B. cut C. put D. sun
+   Đáp án: C
+   Giải thích: "Bus, cut, sun" có âm /ʌ/. "Put" có âm /ʊ/ (u ngắn, khác).
+
+5. Chọn từ có phần gạch chân phát âm khác:
+   A. headache B. beach C. cheap D. teach
+   Đáp án: A
+   Giải thích: "Beach, cheap, teach" có âm /iː/. "Headache" có âm /e/ ở "head".
+
+### PHẦN B: TỪ VỰNG VÀ NGỮ PHÁP (12 câu)
+
+6. How's the weather in summer?
+   A. It's warm. B. It's hot. C. It's cold.
+   Đáp án: B
+
+7. What do you usually wear in winter?
+   A. Shorts and T-shirt B. Jumper and jeans C. Dress
+   Đáp án: B
+
+8. What's the matter with you? (đau răng)
+   A. I have a headache. B. I have a toothache. C. I have a sore throat.
+   Đáp án: B
+
+9. You should ___ to the dentist when you have a toothache.
+   A. go B. went C. going
+   Đáp án: A (sau should là động từ nguyên thể)
+
+10. Where ___ you want to visit?
+    A. do B. does C. are
+    Đáp án: A (I/you/we/they dùng "do")
+
+11. How can I get to the museum?
+    A. You can get there by bus. B. You can get there on foot. C. Both A and B.
+    Đáp án: C (tùy khoảng cách)
+
+12. What do you think of Ha Long Bay?
+    A. I think it's boring. B. I think it's fantastic. C. I think it's noisy.
+    Đáp án: B
+
+13. How far is it from Da Nang to Hoi An?
+    A. It's about 29 kilometres. B. It's about 29 metres. C. It's about 29 hours.
+    Đáp án: A
+
+14. Where are you going to visit this summer?
+    A. I go to Phu Quoc. B. I'm going to visit Phu Quoc. C. I went to Phu Quoc.
+    Đáp án: B
+
+15. What are you going to do this summer?
+    A. I'm going to go camping. B. I go camping. C. I went camping.
+    Đáp án: A
+
+16. Did you swim yesterday?
+    A. Yes, I swim. B. Yes, I did. C. Yes, I do.
+    Đáp án: B
+
+17. Where did your family go last Sunday?
+    A. We go to the beach. B. We went to the beach. C. We are going to the beach.
+    Đáp án: B
+
+### PHẦN C: ĐỌC HIỂU (8 câu)
+
+**Đọc đoạn văn sau và trả lời câu hỏi (Câu 18-22):**
+
+*Peter loves staying healthy. He eats healthy food every day. For breakfast, he usually eats an egg sandwich and some fresh fruit. For lunch and dinner, he likes fish and vegetables. Peter drinks lots of water and fresh juice. He exercises every morning. He does judo on Tuesdays and Thursdays.*
+
+18. What does Peter eat for breakfast?
+    A. Fish and vegetables B. Egg sandwich and fruit C. Bread and milk
+    Đáp án: B
+
+19. What does Peter drink?
+    A. Soda and juice B. Water and fresh juice C. Milk and coffee
+    Đáp án: B
+
+20. How often does Peter exercise?
+    A. Every morning B. Every afternoon C. Every evening
+    Đáp án: A
+
+21. When does Peter do judo?
+    A. On Mondays and Wednesdays B. On Tuesdays and Thursdays C. On weekends
+    Đáp án: B
+
+22. What does "healthy food" mean?
+    A. Đồ ăn nhanh B. Đồ ăn có lợi cho sức khỏe C. Đồ ăn ngọt
+    Đáp án: B
+
+**Đọc đoạn văn sau và trả lời câu hỏi (Câu 23-25):**
+
+*Linda and her family went to Ha Long Bay last weekend. On Saturday, they sunbathed on the beach and swam in the sea. On Sunday, they took a boat trip around the bay. Linda and her brother bought some souvenirs for their friends.*
+
+23. Where did Linda's family go last weekend?
+    A. To Da Nang B. To Ha Long Bay C. To Ho Chi Minh City
+    Đáp án: B
+
+24. What did they do on Saturday?
+    A. Took a boat trip B. Sunbathed and swam C. Bought souvenirs
+    Đáp án: B
+
+25. What did Linda buy?
+    A. Seafood B. Souvenirs C. Photos
+    Đáp án: B
+
+---
+
+## YÊU CẦU KỸ THUẬT KHI XÂY DỰNG WEBAPP:
+
+1. Sử dụng HTML, CSS, JavaScript thuần (vanilla) để dễ deploy.
+2. Dùng localStorage để lưu: tiến trình học, số câu đã làm, lỗi sai, ngày đã học xong.
+3. Web Speech API cho chức năng đọc to từ vựng và câu.
+4. Tạo file `index.html` duy nhất (hoặc tối đa 3 file: index.html, style.css, script.js) để dễ quản lý.
+5. Giao diện phải thân thiện, màu hồng pastel, nút bấm to rõ, chữ đọc dễ.
+6. Có hiệu ứng âm thanh nhẹ khi chọn đúng đáp án (tùy chọn).
+7. Deploy lên Vercel được ngay sau khi hoàn thành.
+
+Hãy bắt đầu xây dựng webapp này ngay.
