@@ -322,6 +322,201 @@ const learningData = {
                 }
             ]
         },
+        12: {
+            title: "My School",
+            vocabulary: [
+                { word: "school", phonetic: "/skuːl/", vietnamese: "trường học", example: "I go to school every day." },
+                { word: "class", phonetic: "/klɑːs/", vietnamese: "lớp học", example: "My class is big." },
+                { word: "teacher", phonetic: "/ˈtiːtʃər/", vietnamese: "giáo viên", example: "My teacher is kind." },
+                { word: "student", phonetic: "/ˈstjuːdnt/", vietnamese: "học sinh", example: "I am a student." },
+                { word: "classroom", phonetic: "/ˈklɑːsruːm/", vietnamese: "phòng học", example: "The classroom is clean." },
+                { word: "library", phonetic: "/ˈlaɪbreri/", vietnamese: "thư viện", example: "Read books in the library." },
+                { word: "playground", phonetic: "/ˈpleɪɡraʊnd/", vietnamese: "sân chơi", example: "Play in the playground." },
+                { word: "subject", phonetic: "/ˈsʌbdʒekt/", vietnamese: "môn học", example: "English is my favorite subject." },
+                { word: "lesson", phonetic: "/ˈlesn/", vietnamese: "bài học", example: "We have a Math lesson." },
+                { word: "homework", phonetic: "/ˈhəʊmwɜːk/", vietnamese: "bài tập về nhà", example: "Do homework every day." }
+            ],
+            quiz: [
+                {
+                    question: "What's your favorite subject?",
+                    options: ["A. I like English.", "B. I am a student.", "C. I go to school."],
+                    correct: 0,
+                    explanation: "Câu hỏi về môn học yêu thích (favorite subject), câu trả lời phải nêu môn học. \"I like English\" là đáp án đúng."
+                },
+                {
+                    question: "Where do you read books?",
+                    options: ["A. In the classroom", "B. In the library", "C. In the playground"],
+                    correct: 1,
+                    explanation: "Thư viện (library) là nơi đọc sách. Classroom là phòng học, playground là sân chơi."
+                },
+                {
+                    question: "Chọn câu đúng:",
+                    options: ["A. My teacher are kind.", "B. My teacher is kind.", "C. My teacher am kind."],
+                    correct: 1,
+                    explanation: "Teacher (giáo viên) là danh từ số ít, dùng động từ \"is\". \"My teacher is kind\" là đúng."
+                },
+                {
+                    question: "What do you do in the playground?",
+                    options: ["A. Read books", "B. Play games", "C. Do homework"],
+                    correct: 1,
+                    explanation: "Sân chơi (playground) là nơi chơi game (play games). Đọc sách ở thư viện, làm bài tập ở nhà hoặc lớp."
+                },
+                {
+                    question: "\"I have English lesson on Monday.\" có nghĩa là gì?",
+                    options: ["A. Tôi học tiếng Anh vào thứ Hai.", "B. Tôi thích tiếng Anh.", "C. Tôi dạy tiếng Anh."],
+                    correct: 0,
+                    explanation: "\"Have English lesson\" = có bài học tiếng Anh. \"On Monday\" = vào thứ Hai."
+                },
+                {
+                    question: "How many students are there in your class? (giả sử 30 học sinh)",
+                    options: ["A. There is thirty students.", "B. There are thirty students.", "C. There have thirty students."],
+                    correct: 1,
+                    explanation: "\"Students\" là số nhiều, dùng \"There are\". \"Thirty\" viết không có chữ \"s\" ở cuối."
+                },
+                {
+                    question: "What does \"homework\" mean?",
+                    options: ["A. Bài tập ở lớp", "B. Bài tập về nhà", "C. Bài kiểm tra"],
+                    correct: 1,
+                    explanation: "\"Homework\" = bài tập về nhà (làm ở nhà sau giờ học)."
+                },
+                {
+                    question: "Chọn từ đúng: \"We ___ Math and English every day.\"",
+                    options: ["A. has", "B. have", "C. having"],
+                    correct: 1,
+                    explanation: "Chủ ngữ \"We\" là số nhiều, dùng động từ \"have\"."
+                }
+            ]
+        },
+        13: {
+            title: "My Friends",
+            vocabulary: [
+                { word: "friend", phonetic: "/frend/", vietnamese: "bạn bè", example: "I have many friends." },
+                { word: "friendly", phonetic: "/ˈfrendli/", vietnamese: "thân thiện", example: "She is very friendly." },
+                { word: "kind", phonetic: "/kaɪnd/", vietnamese: "tốt bụng", example: "He is kind to everyone." },
+                { word: "helpful", phonetic: "/ˈhelpfl/", vietnamese: "giúp ích", example: "She is helpful." },
+                { word: "funny", phonetic: "/ˈfʌni/", vietnamese: "hài hước", example: "He tells funny stories." },
+                { word: "smart", phonetic: "/smɑːrt/", vietnamese: "thông minh", example: "She is smart." },
+                { word: "play together", phonetic: "/pleɪ təˈɡeðər/", vietnamese: "chơi cùng nhau", example: "We play together." },
+                { word: "share", phonetic: "/ʃeər/", vietnamese: "chia sẻ", example: "Share toys with friends." },
+                { word: "talk", phonetic: "/tɔːk/", vietnamese: "nói chuyện", example: "Talk to friends." },
+                { word: "happy", phonetic: "/ˈhæpi/", vietnamese: "vui vẻ", example: "I am happy with my friends." }
+            ],
+            quiz: [
+                {
+                    question: "What is your best friend like?",
+                    options: ["A. She likes reading.", "B. She is friendly and kind.", "C. She is a student."],
+                    correct: 1,
+                    explanation: "Câu hỏi \"What is...like?\" hỏi về tính cách. \"Friendly and kind\" (thân thiện và tốt bụng) là tính cách."
+                },
+                {
+                    question: "What do you do with your friends?",
+                    options: ["A. We play together.", "B. We study alone.", "C. We sleep all day."],
+                    correct: 0,
+                    explanation: "Bạn bè thường chơi cùng nhau (play together). Study alone là học một mình, không phải hoạt động với bạn bè."
+                },
+                {
+                    question: "Chọn câu đúng:",
+                    options: ["A. My friends is friendly.", "B. My friends are friendly.", "C. My friend are friendly."],
+                    correct: 1,
+                    explanation: "\"Friends\" là số nhiều, dùng \"are\". Câu B đúng."
+                },
+                {
+                    question: "\"She always shares her toys with others.\" có nghĩa là gì?",
+                    options: ["A. Cô ấy luôn giữ đồ chơi cho mình.", "B. Cô ấy luôn chia sẻ đồ chơi với người khác.", "C. Cô ấy thích mua đồ chơi."],
+                    correct: 1,
+                    explanation: "\"Share\" = chia sẻ. \"With others\" = với người khác."
+                },
+                {
+                    question: "What does \"funny\" mean?",
+                    options: ["A. Buồn", "B. Hài hước", "C. Nghiêm túc"],
+                    correct: 1,
+                    explanation: "\"Funny\" có nghĩa là hài hước, gây cười."
+                },
+                {
+                    question: "Why do you like your best friend?",
+                    options: ["A. Because she is smart and helpful.", "B. Because she is tall.", "C. Because she has many books."],
+                    correct: 0,
+                    explanation: "Lý do thích bạn bè thường là vì tính cách (smart, helpful, kind, friendly). Cao hay có sách không phải lý do chính."
+                },
+                {
+                    question: "Chọn từ đúng: \"They ___ together every weekend.\"",
+                    options: ["A. plays", "B. play", "C. playing"],
+                    correct: 1,
+                    explanation: "Chủ ngữ \"They\" số nhiều, dùng động từ \"play\"."
+                },
+                {
+                    question: "\"He is very smart.\" – Từ \"smart\" có nghĩa là gì?",
+                    options: ["A. Lười biếng", "B. Thông minh", "C. Yếu"],
+                    correct: 1,
+                    explanation: "\"Smart\" = thông minh, giỏi."
+                }
+            ]
+        },
+        17: {
+            title: "Our Pets",
+            vocabulary: [
+                { word: "pet", phonetic: "/pet/", vietnamese: "thú cưng", example: "I have a pet." },
+                { word: "dog", phonetic: "/dɒɡ/", vietnamese: "chó", example: "The dog is cute." },
+                { word: "cat", phonetic: "/kæt/", vietnamese: "mèo", example: "The cat is lazy." },
+                { word: "bird", phonetic: "/bɜːd/", vietnamese: "chim", example: "The bird sings." },
+                { word: "rabbit", phonetic: "/ˈræbɪt/", vietnamese: "thỏ", example: "The rabbit has long ears." },
+                { word: "hamster", phonetic: "/ˈhæmstər/", vietnamese: "chuột hamster", example: "My hamster is small." },
+                { word: "goldfish", phonetic: "/ˈɡəʊldfɪʃ/", vietnamese: "cá vàng", example: "The goldfish swims." },
+                { word: "feed", phonetic: "/fiːd/", vietnamese: "cho ăn", example: "Feed the pets." },
+                { word: "cage", phonetic: "/keɪdʒ/", vietnamese: "lồng", example: "The bird is in the cage." },
+                { word: "take care of", phonetic: "/teɪk keər ɒv/", vietnamese: "chăm sóc", example: "Take care of pets." }
+            ],
+            quiz: [
+                {
+                    question: "What pet do you have?",
+                    options: ["A. I have a dog.", "B. I like dogs.", "C. I see a dog."],
+                    correct: 0,
+                    explanation: "Câu hỏi về thú cưng bạn có (have), câu trả lời phải dùng \"I have\". A là đúng."
+                },
+                {
+                    question: "Where does the bird live?",
+                    options: ["A. In the cage", "B. In the water", "C. On the ground"],
+                    correct: 0,
+                    explanation: "Chim (bird) sống trong lồng (cage). Cá sống trong nước, thỏ/chó/mèo sống trên mặt đất."
+                },
+                {
+                    question: "Chọn câu đúng:",
+                    options: ["A. My pet are cute.", "B. My pet is cute.", "C. My pets is cute."],
+                    correct: 1,
+                    explanation: "\"Pet\" là số ít, dùng \"is\". Câu B đúng."
+                },
+                {
+                    question: "What do you feed your dog?",
+                    options: ["A. Fish food", "B. Dog food", "C. Bird food"],
+                    correct: 1,
+                    explanation: "Chó (dog) ăn thức ăn cho chó (dog food). Cá ăn cá food, chim ăn bird food."
+                },
+                {
+                    question: "\"You should take care of your pets.\" có nghĩa là gì?",
+                    options: ["A. Bạn nên bỏ thú cưng.", "B. Bạn nên chăm sóc thú cưng.", "C. Bạn nên mua thêm thú cưng."],
+                    correct: 1,
+                    explanation: "\"Take care of\" = chăm sóc. \"Should\" = nên."
+                },
+                {
+                    question: "What does the rabbit have?",
+                    options: ["A. Long ears", "B. Short ears", "C. No ears"],
+                    correct: 0,
+                    explanation: "Thỏ (rabbit) có đôi tai dài (long ears)."
+                },
+                {
+                    question: "How often do you feed your goldfish?",
+                    options: ["A. Once a day", "B. Once a week", "C. Once a month"],
+                    correct: 0,
+                    explanation: "Cá vàng (goldfish) thường cho ăn một lần mỗi ngày (once a day)."
+                },
+                {
+                    question: "Chọn từ đúng: \"My cat ___ fish.\"",
+                    options: ["A. eat", "B. eats", "C. eating"],
+                    correct: 1,
+                    explanation: "Chủ ngữ \"My cat\" là số ít, động từ phải thêm \"s\" → \"eats\"."
+                }
+            ]
+        },
         11: {
             title: "Family Time",
             vocabulary: [
@@ -627,6 +822,503 @@ const learningData = {
             explanation: "Trong bài đọc: \"Linda and her brother bought some souvenirs for their friends.\"",
             part: "reading"
         }
+    ],
+    // New exercise types
+    readingComprehension: [
+        {
+            id: 1,
+            unit: 16,
+            title: "Unit 16 - Four Seasons in Vietnam",
+            passage: "There are four seasons in the north of Viet Nam: spring, summer, autumn and winter. Each season has different weather. Spring is warm and humid. There are many flowers in spring. People often go for picnics. Summer is hot and sunny. Children have summer holidays. They go to the beach and swim in the sea. Autumn is cool and cloudy. The sky is blue. The leaves turn yellow. It's a beautiful season. Winter is cold and dry. People wear warm clothes like jumpers, jackets, and scarves. They drink hot tea and stay at home. Which season do you like best?",
+            questions: [
+                {
+                    type: "trueFalse",
+                    question: "There are four seasons in the north of Viet Nam.",
+                    correct: true,
+                    explanation: "Đoạn văn nói rõ: 'There are four seasons in the north of Viet Nam'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Summer is cool and cloudy.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'Summer is hot and sunny'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "People wear warm clothes in autumn.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'People wear warm clothes' vào mùa đông (winter), không phải mùa thu."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Children have summer holidays in summer.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'Children have summer holidays' vào mùa hè."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What do people do in spring?",
+                    correct: "They go for picnics.",
+                    explanation: "Đoạn văn nói: 'People often go for picnics' vào mùa xuân."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What do children do in summer?",
+                    correct: "They go to the beach and swim in the sea.",
+                    explanation: "Đoạn văn nói: 'They go to the beach and swim in the sea'."
+                }
+            ]
+        },
+        {
+            id: 2,
+            unit: "14-15",
+            title: "Unit 14+15 - Peter's Healthy Lifestyle",
+            passage: "Peter is a healthy boy. He eats healthy food every day. He has fish, vegetables, and fruit for lunch and dinner. He doesn't eat fast food or sweets. He drinks lots of water, about 8 glasses a day. He exercises every morning before school. He does judo twice a week on Tuesdays and Fridays. He also rides his bicycle to school. When Peter has a toothache, he goes to the dentist. When he has a headache, he rests and drinks water. He never stays up late. He goes to bed at 9 o'clock every night. That's why Peter is always healthy and strong.",
+            questions: [
+                {
+                    type: "trueFalse",
+                    question: "Peter eats fast food.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'He doesn't eat fast food or sweets'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Peter does judo twice a week.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'He does judo twice a week'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Peter goes to bed at 10 o'clock.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'He goes to bed at 9 o'clock every night'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Peter rides his bicycle to school.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'He also rides his bicycle to school'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What does Peter do when he has a toothache?",
+                    correct: "He goes to the dentist.",
+                    explanation: "Đoạn văn nói: 'When Peter has a toothache, he goes to the dentist'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "How much water does Peter drink every day?",
+                    correct: "About 8 glasses.",
+                    explanation: "Đoạn văn nói: 'He drinks lots of water, about 8 glasses a day'."
+                }
+            ]
+        },
+        {
+            id: 3,
+            unit: 18,
+            title: "Unit 18 - Getting Around in Hanoi",
+            passage: "Welcome to Ha Noi! It's a beautiful city in Viet Nam. There are many interesting places to visit. To get to Hoan Kiem Lake, you can take a bus number 9 or walk. It is in the centre of the city. Many tourists visit this place every day. To get to the Museum of Ethnology, you can take a bus or a taxi. It's about 5 kilometres from the city centre. To get to the West Lake, you can ride a bicycle or take a taxi. It's not far from the city centre. You can see many beautiful buildings around the lake. To get to the Opera House, you can take a bus or walk. It's in the centre of Ha Noi, near Hoan Kiem Lake. Remember to check if it's far or near before you choose your transportation.",
+            questions: [
+                {
+                    type: "trueFalse",
+                    question: "You can only go to Hoan Kiem Lake by bus.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'you can take a bus number 9 or walk'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "The Museum of Ethnology is about 5 kilometres from the city centre.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'It's about 5 kilometres from the city centre'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "You can ride a bicycle to the West Lake.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'you can ride a bicycle or take a taxi'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "The Opera House is far from Hoan Kiem Lake.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'It's in the centre of Ha Noi, near Hoan Kiem Lake'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "Where is Hoan Kiem Lake?",
+                    correct: "In the centre of Ha Noi.",
+                    explanation: "Đoạn văn nói: 'It is in the centre of the city'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What can you see around the West Lake?",
+                    correct: "Many beautiful buildings.",
+                    explanation: "Đoạn văn nói: 'You can see many beautiful buildings around the lake'."
+                }
+            ]
+        },
+        {
+            id: 4,
+            unit: 19,
+            title: "Unit 19 - A Trip to Sentosa Island",
+            passage: "Last month, my family went to Singapore. We visited Sentosa Island. It is a fantastic place for a holiday. The island has beautiful beaches. You can build sandcastles on the beach and swim in the sea. In the evening, we watched a wonderful show called 'Songs of the Sea'. There were lights, music, and water fountains. It was amazing! We also visited the Merlion Park. The Merlion is a famous symbol of Singapore. It has the head of a lion and the body of a fish. We took many photos there. We also went to the Singapore Zoo. It's one of the best zoos in the world. We saw many animals like monkeys, elephants, and giraffes. It was a great trip. I want to visit Singapore again!",
+            questions: [
+                {
+                    type: "trueFalse",
+                    question: "Sentosa Island is in Viet Nam.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'my family went to Singapore'. Sentosa Island ở Singapore."
+                },
+                {
+                    type: "trueFalse",
+                    question: "The Merlion has the head of a fish and the body of a lion.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'It has the head of a lion and the body of a fish'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "They watched a show called 'Songs of the Sea'.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'we watched a wonderful show called Songs of the Sea'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "The Singapore Zoo is one of the best zoos in the world.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'It's one of the best zoos in the world'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What can you do on the beach at Sentosa Island?",
+                    correct: "Build sandcastles and swim in the sea.",
+                    explanation: "Đoạn văn nói: 'You can build sandcastles on the beach and swim in the sea'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What animals did they see at the zoo?",
+                    correct: "Monkeys, elephants, and giraffes.",
+                    explanation: "Đoạn văn nói: 'We saw many animals like monkeys, elephants, and giraffes'."
+                }
+            ]
+        },
+        {
+            id: 5,
+            unit: 20,
+            title: "Unit 20 - Summer Holiday Plans",
+            passage: "Last summer, Linh went to an eco-farm in the countryside. She stayed with her grandparents for two weeks. She helped her grandparents grow vegetables like tomatoes, cucumbers, and beans. She also fed the chickens and ducks. She learned how to cook traditional Vietnamese food. It was a wonderful experience. This summer, Linh is going to visit Phu Quoc Island with her parents. They are going to stay at a hotel near the beach. They are going to swim in the sea and go snorkeling to see colorful fish. They are going to eat fresh seafood. Linh is also going to buy some souvenirs for her friends. She is very excited about this trip. What are you going to do this summer?",
+            questions: [
+                {
+                    type: "trueFalse",
+                    question: "Linh went to an eco-farm last summer.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'Last summer, Linh went to an eco-farm'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "Linh stayed with her grandparents for one week.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'She stayed with her grandparents for two weeks'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "This summer, Linh is going to visit Phu Quoc Island with her friends.",
+                    correct: false,
+                    explanation: "Sai! Đoạn văn nói: 'Linh is going to visit Phu Quoc Island with her parents'."
+                },
+                {
+                    type: "trueFalse",
+                    question: "They are going to go snorkeling.",
+                    correct: true,
+                    explanation: "Đúng! Đoạn văn nói: 'They are going to swim in the sea and go snorkeling'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What did Linh grow at the eco-farm?",
+                    correct: "Tomatoes, cucumbers, and beans.",
+                    explanation: "Đoạn văn nói: 'She helped her grandparents grow vegetables like tomatoes, cucumbers, and beans'."
+                },
+                {
+                    type: "shortAnswer",
+                    question: "What animals did Linh feed at the eco-farm?",
+                    correct: "Chickens and ducks.",
+                    explanation: "Đoạn văn nói: 'She also fed the chickens and ducks'."
+                }
+            ]
+        }
+    ],
+    matchingExercises: [
+        {
+            id: 1,
+            unit: 16,
+            title: "Unit 16 - Thời tiết",
+            columnA: [
+                "1. How's the weather in summer?",
+                "2. How's the weather in winter?",
+                "3. What do you wear in winter?"
+            ],
+            columnB: [
+                "a. I wear a jumper and jeans.",
+                "b. It's hot and sunny.",
+                "c. It's cold and dry."
+            ],
+            correctAnswers: { "1": "b", "2": "c", "3": "a" },
+            explanation: "Ghép câu hỏi về thời tiết với câu trả lời phù hợp."
+        },
+        {
+            id: 2,
+            unit: "14-15",
+            title: "Unit 14+15 - Sức khỏe",
+            columnA: [
+                "1. What's the matter with you? (đau răng)",
+                "2. What should I do when I have a toothache?",
+                "3. How does Peter stay healthy?"
+            ],
+            columnB: [
+                "a. You should go to the dentist.",
+                "b. I have a toothache.",
+                "c. He eats fish and vegetables."
+            ],
+            correctAnswers: { "1": "b", "2": "a", "3": "c" },
+            explanation: "Ghép câu hỏi về sức khỏe với lời khuyên phù hợp."
+        },
+        {
+            id: 3,
+            unit: 18,
+            title: "Unit 18 - Phương tiện",
+            columnA: [
+                "1. Where do you want to visit?",
+                "2. How can I get to the museum?",
+                "3. Is it far from here?"
+            ],
+            columnB: [
+                "a. You can get there by bus.",
+                "b. I want to visit Ha Long Bay.",
+                "c. No, it isn't."
+            ],
+            correctAnswers: { "1": "b", "2": "a", "3": "c" },
+            explanation: "Ghép câu hỏi về phương tiện và địa điểm với câu trả lời phù hợp."
+        },
+        {
+            id: 4,
+            unit: 19,
+            title: "Unit 19 - Địa điểm",
+            columnA: [
+                "1. What do you think of Ha Long Bay?",
+                "2. How far is it from Da Nang to Hoi An?",
+                "3. What do you think of the Sydney Opera House?"
+            ],
+            columnB: [
+                "a. It's about 29 kilometres.",
+                "b. I think it's fantastic.",
+                "c. I think it's beautiful."
+            ],
+            correctAnswers: { "1": "b", "2": "a", "3": "c" },
+            explanation: "Ghép câu hỏi về ý kiến và khoảng cách với câu trả lời phù hợp."
+        },
+        {
+            id: 5,
+            unit: "20-11",
+            title: "Unit 20 + 11 - Kỳ nghỉ & Gia đình",
+            columnA: [
+                "1. Where are you going to visit this summer?",
+                "2. What are you going to do this summer?",
+                "3. Did you swim yesterday?"
+            ],
+            columnB: [
+                "a. Yes, I did.",
+                "b. I'm going to visit Phu Quoc.",
+                "c. I'm going to go camping."
+            ],
+            correctAnswers: { "1": "b", "2": "c", "3": "a" },
+            explanation: "Ghép câu hỏi về kỳ nghỉ và quá khứ với câu trả lời phù hợp."
+        }
+    ],
+    sentenceRearrangement: [
+        {
+            id: 1,
+            unit: 16,
+            title: "Unit 16 - Seasons and Weather",
+            sentences: [
+                {
+                    scrambled: "hot / summer / is",
+                    correct: "Summer is hot.",
+                    explanation: "Mùa hè thì nóng. Chủ ngữ 'Summer' + động từ 'is' + tính từ 'hot'.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "wear / I / winter / jeans / in",
+                    correct: "I wear jeans in winter.",
+                    explanation: "Tôi mặc quần jean vào mùa đông. Chủ ngữ + động từ + tân ngữ + giới từ chỉ thời gian.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "weather / the / is / in / spring / warm",
+                    correct: "The weather in spring is warm.",
+                    explanation: "Thời tiết mùa xuân ấm. Cấu trúc: The weather in + season + is + tính từ.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "is / autumn / cool / and / cloudy",
+                    correct: "Autumn is cool and cloudy.",
+                    explanation: "Mùa thu mát và nhiều mây. Chủ ngữ + động từ + tính từ + and + tính từ.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "weather / How's / the / in / winter",
+                    correct: "How's the weather in winter?",
+                    explanation: "Thời tiết mùa đông thế nào? Câu hỏi thời tiết với 'How's'.",
+                    type: "question"
+                }
+            ]
+        },
+        {
+            id: 2,
+            unit: "14-15",
+            title: "Unit 14+15 - Health and Advice",
+            sentences: [
+                {
+                    scrambled: "have / I / a / headache",
+                    correct: "I have a headache.",
+                    explanation: "Tôi bị đau đầu. Cấu trúc 'I have a + bệnh'.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "should / you / to / go / dentist / the",
+                    correct: "You should go to the dentist.",
+                    explanation: "Bạn nên đi nha sĩ. 'Should' + động từ nguyên thể.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "shouldn't / eat / You / sweet / food",
+                    correct: "You shouldn't eat sweet food.",
+                    explanation: "Bạn không nên ăn đồ ngọt. 'Shouldn't' + động từ nguyên thể.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "matter / the / with / is / What / you",
+                    correct: "What's the matter with you?",
+                    explanation: "Bạn bị sao? Câu hỏi về sức khỏe.",
+                    type: "question"
+                },
+                {
+                    scrambled: "should / I / do / What",
+                    correct: "What should I do?",
+                    explanation: "Tôi nên làm gì? Câu hỏi xin lời khuyên.",
+                    type: "question"
+                }
+            ]
+        },
+        {
+            id: 3,
+            unit: 18,
+            title: "Unit 18 - Transport and Directions",
+            sentences: [
+                {
+                    scrambled: "you / do / want / where / to / visit",
+                    correct: "Where do you want to visit?",
+                    explanation: "Bạn muốn tham quan ở đâu? Câu hỏi với 'Where' + trợ động từ 'do'.",
+                    type: "question"
+                },
+                {
+                    scrambled: "get / can / I / how / to / the / museum",
+                    correct: "How can I get to the museum?",
+                    explanation: "Làm thế nào tôi có thể đến bảo tàng? Câu hỏi chỉ đường.",
+                    type: "question"
+                },
+                {
+                    scrambled: "is / it / far / from / here",
+                    correct: "Is it far from here?",
+                    explanation: "Nó có xa không ở đây? Câu hỏi về khoảng cách.",
+                    type: "question"
+                },
+                {
+                    scrambled: "can / get / there / bus / You / by / a",
+                    correct: "You can get there by bus.",
+                    explanation: "Bạn có thể đến đó bằng xe buýt. Cấu trúc: You can + get to + nơi + by + phương tiện.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "want / I / visit / to / Ha Long Bay",
+                    correct: "I want to visit Ha Long Bay.",
+                    explanation: "Tôi muốn thăm vịnh Hạ Long. Cấu trúc: I want to + động từ nguyên thể.",
+                    type: "statement"
+                }
+            ]
+        },
+        {
+            id: 4,
+            unit: 19,
+            title: "Unit 19 - Places and Opinions",
+            sentences: [
+                {
+                    scrambled: "think / you / what / of / Ha Long Bay / do",
+                    correct: "What do you think of Ha Long Bay?",
+                    explanation: "Bạn nghĩ gì về vịnh Hạ Long? Cấu trúc hỏi ý kiến.",
+                    type: "question"
+                },
+                {
+                    scrambled: "is / it / far / from / here / to / the / beach",
+                    correct: "How far is it from here to the beach?",
+                    explanation: "Khoảng cách từ đây đến bãi biển bao xa? Câu hỏi khoảng cách.",
+                    type: "question"
+                },
+                {
+                    scrambled: "is / about / kilometres / It / 29",
+                    correct: "It is about 29 kilometres.",
+                    explanation: "Nó khoảng 29 ki-lô-mét. Cấu trúc: It is about + số + kilometres.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "think / fantastic / I / is / it",
+                    correct: "I think it is fantastic.",
+                    explanation: "Tôi nghĩ nó tuyệt vời. Cấu trúc nêu ý kiến.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "place / beautiful / a / is / It",
+                    correct: "It is a beautiful place.",
+                    explanation: "Nó là một nơi đẹp. Cấu trúc: It is a + tính từ + noun.",
+                    type: "statement"
+                }
+            ]
+        },
+        {
+            id: 5,
+            unit: 20,
+            title: "Unit 20 - Summer Plans and Past Actions",
+            sentences: [
+                {
+                    scrambled: "going / I / to / am / visit / Phu Quoc",
+                    correct: "I am going to visit Phu Quoc.",
+                    explanation: "Tôi định đi thăm Phú Quốc. Cấu trúc 'be going to'.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "did / you / yesterday / swim",
+                    correct: "Did you swim yesterday?",
+                    explanation: "Hôm qua bạn đã bơi phải không? Câu hỏi thì quá khứ đơn.",
+                    type: "question"
+                },
+                {
+                    scrambled: "went / to / beach / the / We",
+                    correct: "We went to the beach.",
+                    explanation: "Chúng tôi đã đi đến bãi biển. Thì quá khứ đơn.",
+                    type: "statement"
+                },
+                {
+                    scrambled: "are / you / going / to / do / this / summer / What",
+                    correct: "What are you going to do this summer?",
+                    explanation: "Bạn sẽ làm gì mùa hè này? Câu hỏi với be going to.",
+                    type: "question"
+                },
+                {
+                    scrambled: "are / the / who / characters / main",
+                    correct: "Who are the main characters?",
+                    explanation: "Ai là nhân vật chính? Câu hỏi với 'Who' + động từ 'are'.",
+                    type: "question"
+                }
+            ]
+        }
     ]
 };
 
@@ -641,6 +1333,15 @@ let mockTestAnswers = [];
 let currentMockTestQuestion = 0;
 let speechSynthesis = window.speechSynthesis;
 let currentDayModal = null; // Track which day modal is open
+
+// New exercise type variables
+let currentReadingIndex = 0;
+let readingAnswers = [];
+let currentMatchingIndex = 0;
+let matchingAnswers = {};
+let currentSentenceExerciseIndex = 0;
+let currentSentenceIndex = 0;
+let sentenceAnswers = [];
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', function() {
@@ -937,37 +1638,734 @@ function getDayLearningContent(day) {
                 content: "If you have a toothache, you should go to the dentist. You shouldn't eat sweet things. You should take medicine and rest.",
                 question: "What should you do when you have a toothache?"
             }
+        },
+        // Week 2 continued: Unit 14+15
+        {
+            day: 6, title: "Unit 14+15 - Exercise and staying healthy",
+            pronunciation: { words: ["exercise", "dentist", "doctor", "healthy"] },
+            vocabulary: { 
+                unit: "14-15", 
+                topic: "Staying Healthy",
+                words: [
+                    { word: "exercise", phonetic: "/ˈeksərsaɪz/", vietnamese: "tập thể dục", example: "Do exercise every day." },
+                    { word: "dentist", phonetic: "/ˈdentɪst/", vietnamese: "nha sĩ", example: "Go to the dentist." },
+                    { word: "doctor", phonetic: "/ˈdɒktər/", vietnamese: "bác sĩ", example: "See a doctor." }
+                ]
+            },
+            grammar: { 
+                unit: "14-15",
+                point: "Câu khuyên: You should/shouldn't...",
+                explanation: "Dùng should/shouldn't để đưa ra lời khuyên về sức khỏe."
+            },
+            reading: {
+                title: "Healthy Lifestyle",
+                content: "Peter does judo twice a week. He eats fish and vegetables. He drinks lots of water. This is a healthy lifestyle.",
+                question: "How does Peter stay healthy?"
+            }
+        },
+        {
+            day: 7, title: "Unit 14+15 - Review Health vocabulary",
+            pronunciation: { words: ["headache", "toothache", "sore throat", "fever", "should", "shouldn't"] },
+            vocabulary: { 
+                unit: "14-15", 
+                topic: "Health Review",
+                words: [
+                    { word: "headache", phonetic: "/ˈhedeɪk/", vietnamese: "đau đầu", example: "I have a headache." },
+                    { word: "toothache", phonetic: "/ˈtuːθeɪk/", vietnamese: "đau răng", example: "I have a toothache." },
+                    { word: "fever", phonetic: "/ˈfiːvər/", vietnamese: "sốt", example: "I have a fever." }
+                ]
+            },
+            grammar: { 
+                unit: "14-15",
+                point: "Ôn tập: What's the matter? + Should/Shouldn't",
+                explanation: "Kết hợp hỏi về sức khỏe và đưa ra lời khuyên."
+            },
+            reading: {
+                title: "Health Check",
+                content: "If you feel sick, tell your parents. They will take you to the doctor. Follow the doctor's advice.",
+                question: "What should you do when you feel sick?"
+            }
+        },
+        // Week 3: Unit 18 - Means of Transport
+        {
+            day: 8, title: "Bắt đầu Unit 18 - Means of Transport",
+            pronunciation: { words: ["bus", "taxi", "bicycle", "train"] },
+            vocabulary: { 
+                unit: 18, 
+                topic: "Transportation",
+                words: [
+                    { word: "bus", phonetic: "/bʌs/", vietnamese: "xe buýt", example: "I go by bus." },
+                    { word: "taxi", phonetic: "/ˈtæksi/", vietnamese: "xe taxi", example: "Take a taxi." },
+                    { word: "bicycle", phonetic: "/ˈbaɪsɪkl/", vietnamese: "xe đạp", example: "Go by bicycle." },
+                    { word: "train", phonetic: "/treɪn/", vietnamese: "tàu hỏa", example: "Travel by train." }
+                ]
+            },
+            grammar: { 
+                unit: 18,
+                point: "Câu hỏi: How can I get to...?",
+                explanation: "Hỏi đường đến một địa điểm. Trả lời: You can get there by + phương tiện."
+            },
+            reading: {
+                title: "Getting Around",
+                content: "There are many ways to travel: by bus, by taxi, by bicycle, or on foot. Choose the best way for your trip.",
+                question: "How do you usually go to school?"
+            }
+        },
+        {
+            day: 9, title: "Unit 18 - On foot and ferry",
+            pronunciation: { words: ["on foot", "ferry", "get", "lost"] },
+            vocabulary: { 
+                unit: 18, 
+                topic: "Ways to Travel",
+                words: [
+                    { word: "on foot", phonetic: "/ɒn fʊt/", vietnamese: "đi bộ", example: "I go on foot." },
+                    { word: "ferry", phonetic: "/ˈferi/", vietnamese: "phà", example: "Take a ferry." },
+                    { word: "lost", phonetic: "/lɒst/", vietnamese: "lạc", example: "I'm lost." }
+                ]
+            },
+            grammar: { 
+                unit: 18,
+                point: "Câu hỏi: Is it far from here?",
+                explanation: "Hỏi về khoảng cách. Trả lời: Yes, it is. / No, it isn't."
+            },
+            reading: {
+                title: "Asking for Directions",
+                content: "Excuse me! I'm lost. How can I get to the museum? You can get there by bus or on foot.",
+                question: "What do you say when you are lost?"
+            }
+        },
+        {
+            day: 10, title: "Unit 18 - Famous places",
+            pronunciation: { words: ["Dragon Bridge", "Opera House", "visit", "want"] },
+            vocabulary: { 
+                unit: 18, 
+                topic: "Places to Visit",
+                words: [
+                    { word: "Dragon Bridge", phonetic: "/ˈdræɡən brɪdʒ/", vietnamese: "Cầu Rồng", example: "Visit Dragon Bridge." },
+                    { word: "Opera House", phonetic: "/ˈɒprə haʊs/", vietnamese: "Nhà hát Opera", example: "Ha Noi Opera House." }
+                ]
+            },
+            grammar: { 
+                unit: 18,
+                point: "Câu hỏi: Where do you want to visit?",
+                explanation: "Hỏi về nơi muốn tham quan. Trả lời: I want to visit + địa điểm."
+            },
+            reading: {
+                title: "Vietnam Landmarks",
+                content: "Dragon Bridge is in Da Nang. Opera House is in Ha Noi. They are famous places in Vietnam.",
+                question: "Where is Dragon Bridge?"
+            }
+        },
+        {
+            day: 11, title: "Unit 18 - Review Transport",
+            pronunciation: { words: ["bus", "taxi", "bicycle", "train", "ferry", "on foot"] },
+            vocabulary: { 
+                unit: 18, 
+                topic: "Transport Review",
+                words: [
+                    { word: "bus", phonetic: "/bʌs/", vietnamese: "xe buýt", example: "I go by bus." },
+                    { word: "taxi", phonetic: "/ˈtæksi/", vietnamese: "xe taxi", example: "Take a taxi." },
+                    { word: "on foot", phonetic: "/ɒn fʊt/", vietnamese: "đi bộ", example: "I go on foot." }
+                ]
+            },
+            grammar: { 
+                unit: 18,
+                point: "Ôn tập: How can I get to...? / Is it far?",
+                explanation: "Hỏi đường và hỏi khoảng cách."
+            },
+            reading: {
+                title: "Travel Smart",
+                content: "When you travel, plan your route. Check if it's far or near. Choose the best transportation.",
+                question: "How do you plan your trip?"
+            }
+        },
+        // Week 4: Unit 19 - Places of Interest
+        {
+            day: 12, title: "Bắt đầu Unit 19 - Places of Interest",
+            pronunciation: { words: ["beautiful", "exciting", "fantastic", "peaceful"] },
+            vocabulary: { 
+                unit: 19, 
+                topic: "Describing Places",
+                words: [
+                    { word: "beautiful", phonetic: "/ˈbjuːtɪfl/", vietnamese: "đẹp", example: "The beach is beautiful." },
+                    { word: "exciting", phonetic: "/ɪkˈsaɪtɪŋ/", vietnamese: "thú vị", example: "The trip is exciting." },
+                    { word: "fantastic", phonetic: "/fænˈtæstɪk/", vietnamese: "tuyệt vời", example: "Ha Long Bay is fantastic." },
+                    { word: "peaceful", phonetic: "/ˈpiːsfl/", vietnamese: "yên bình", example: "The village is peaceful." }
+                ]
+            },
+            grammar: { 
+                unit: 19,
+                point: "Câu hỏi: What do you think of...?",
+                explanation: "Hỏi ý kiến về một nơi. Trả lời: I think it's + tính từ."
+            },
+            reading: {
+                title: "Amazing Places",
+                content: "Ha Long Bay is fantastic. The beach is beautiful. The village is peaceful. Vietnam has many amazing places.",
+                question: "What do you think of Ha Long Bay?"
+            }
+        },
+        {
+            day: 13, title: "Unit 19 - Distance: far and near",
+            pronunciation: { words: ["kilometre", "far", "near", "how far"] },
+            vocabulary: { 
+                unit: 19, 
+                topic: "Distance",
+                words: [
+                    { word: "kilometre", phonetic: "/kɪˈlɒmɪtər/", vietnamese: "ki-lô-mét", example: "It's 10 kilometres." },
+                    { word: "far", phonetic: "/fɑːr/", vietnamese: "xa", example: "Is it far?" },
+                    { word: "near", phonetic: "/nɪr/", vietnamese: "gần", example: "It's near here." }
+                ]
+            },
+            grammar: { 
+                unit: 19,
+                point: "Câu hỏi: How far is it from A to B?",
+                explanation: "Hỏi khoảng cách giữa hai địa điểm. Trả lời: It's about + số + kilometres."
+            },
+            reading: {
+                title: "Distance Matters",
+                content: "Da Nang to Hoi An is about 29 kilometres. It's not very far. You can go by bus or taxi.",
+                question: "How far is it from your home to school?"
+            }
+        },
+        {
+            day: 14, title: "Unit 19 - Planning a trip",
+            pronunciation: { words: ["plan", "trip", "family", "why not"] },
+            vocabulary: { 
+                unit: 19, 
+                topic: "Trip Planning",
+                words: [
+                    { word: "plan", phonetic: "/plæn/", vietnamese: "lên kế hoạch", example: "Plan a trip." },
+                    { word: "trip", phonetic: "/trɪp/", vietnamese: "chuyến đi", example: "A family trip." },
+                    { word: "family", phonetic: "/ˈfæməli/", vietnamese: "gia đình", example: "With my family." }
+                ]
+            },
+            grammar: { 
+                unit: 19,
+                point: "Câu gợi ý: Why not + động từ?",
+                explanation: "Why not plan a trip? = Tại sao không lên kế hoạch cho một chuyến đi?"
+            },
+            reading: {
+                title: "Family Trip",
+                content: "Why not plan a trip with your family? You can visit beautiful places and have fun together.",
+                question: "Where do you want to go with your family?"
+            }
+        },
+        {
+            day: 15, title: "Unit 19 - Review Places",
+            pronunciation: { words: ["beautiful", "exciting", "fantastic", "peaceful", "far", "near"] },
+            vocabulary: { 
+                unit: 19, 
+                topic: "Places Review",
+                words: [
+                    { word: "fantastic", phonetic: "/fænˈtæstɪk/", vietnamese: "tuyệt vời", example: "It's fantastic." },
+                    { word: "peaceful", phonetic: "/ˈpiːsfl/", vietnamese: "yên bình", example: "It's peaceful." },
+                    { word: "kilometre", phonetic: "/kɪˈlɒmɪtər/", vietnamese: "ki-lô-mét", example: "It's 10 kilometres." }
+                ]
+            },
+            grammar: { 
+                unit: 19,
+                point: "Ôn tập: What do you think of...? / How far is it...?",
+                explanation: "Hỏi ý kiến và hỏi khoảng cách."
+            },
+            reading: {
+                title: "Travel Review",
+                content: "What do you think of your trip? Is it far? Is it beautiful? Share your experience with friends.",
+                question: "Describe your favorite place."
+            }
+        },
+        // Week 5: Unit 20 - Summer Holidays
+        {
+            day: 16, title: "Bắt đầu Unit 20 - Summer Holidays",
+            pronunciation: { words: ["summer holiday", "going to", "visit", "this summer"] },
+            vocabulary: { 
+                unit: 20, 
+                topic: "Summer Plans",
+                words: [
+                    { word: "summer holiday", phonetic: "/ˈsʌmər ˈhɒlədeɪ/", vietnamese: "kỳ nghỉ hè", example: "I love summer holiday." },
+                    { word: "visit", phonetic: "/ˈvɪzɪt/", vietnamese: "thăm", example: "Visit Phu Quoc." }
+                ]
+            },
+            grammar: { 
+                unit: 20,
+                point: "Be going to: Dự định tương lai",
+                explanation: "I'm going to + động từ = Tôi định/sẽ làm gì. Diễn tả dự định trong tương lai gần."
+            },
+            reading: {
+                title: "Summer Dreams",
+                content: "Summer holiday is coming. I'm going to visit Phu Quoc Island. I'm going to swim in the sea.",
+                question: "What are you going to do this summer?"
+            }
+        },
+        {
+            day: 17, title: "Unit 20 - Summer activities",
+            pronunciation: { words: ["go camping", "join a club", "practise swimming"] },
+            vocabulary: { 
+                unit: 20, 
+                topic: "Summer Activities",
+                words: [
+                    { word: "go camping", phonetic: "/ɡəʊ ˈkæmpɪŋ/", vietnamese: "đi cắm trại", example: "We go camping." },
+                    { word: "join a club", phonetic: "/dʒɔɪn ə klʌb/", vietnamese: "tham gia câu lạc bộ", example: "Join a music club." },
+                    { word: "practise swimming", phonetic: "/ˈpræktɪs ˈswɪmɪŋ/", vietnamese: "tập bơi", example: "Practise swimming every day." }
+                ]
+            },
+            grammar: { 
+                unit: 20,
+                point: "Be going to + động từ",
+                explanation: "I'm going to go camping. I'm going to join a club. Diễn tả các hoạt động sẽ làm."
+            },
+            reading: {
+                title: "Fun Summer",
+                content: "This summer, I'm going to go camping with friends. I'm going to join a music club. It will be fun!",
+                question: "What activities do you like in summer?"
+            }
+        },
+        {
+            day: 18, title: "Unit 20 - Summer destinations",
+            pronunciation: { words: ["Phu Quoc Island", "Phong Nha Cave", "farm", "island"] },
+            vocabulary: { 
+                unit: 20, 
+                topic: "Places to Visit in Summer",
+                words: [
+                    { word: "Phu Quoc Island", phonetic: "/fuː kwɒk ˈaɪlənd/", vietnamese: "đảo Phú Quốc", example: "Go to Phu Quoc." },
+                    { word: "Phong Nha Cave", phonetic: "/fɒŋ nɑː keɪv/", vietnamese: "động Phong Nha", example: "Explore Phong Nha Cave." },
+                    { word: "visit a farm", phonetic: "/ˈvɪzɪt ə fɑːrm/", vietnamese: "thăm trang trại", example: "Visit an eco-farm." }
+                ]
+            },
+            grammar: { 
+                unit: 20,
+                point: "Where are you going to visit?",
+                explanation: "Hỏi về địa điểm sẽ thăm. Trả lời: I'm going to visit + địa điểm."
+            },
+            reading: {
+                title: "Summer Destinations",
+                content: "I'm going to visit Phu Quoc Island. My friend is going to Phong Nha Cave. We will have a great summer!",
+                question: "Where are you going to visit this summer?"
+            }
+        },
+        {
+            day: 19, title: "Unit 20 - Review Summer",
+            pronunciation: { words: ["summer holiday", "go camping", "join a club", "going to"] },
+            vocabulary: { 
+                unit: 20, 
+                topic: "Summer Review",
+                words: [
+                    { word: "summer holiday", phonetic: "/ˈsʌmər ˈhɒlədeɪ/", vietnamese: "kỳ nghỉ hè", example: "I love summer holiday." },
+                    { word: "go camping", phonetic: "/ɡəʊ ˈkæmpɪŋ/", vietnamese: "đi cắm trại", example: "We go camping." },
+                    { word: "practise swimming", phonetic: "/ˈpræktɪs ˈswɪmɪŋ/", vietnamese: "tập bơi", example: "Practise swimming." }
+                ]
+            },
+            grammar: { 
+                unit: 20,
+                point: "Ôn tập: Be going to + Where/What",
+                explanation: "Where are you going to visit? / What are you going to do?"
+            },
+            reading: {
+                title: "Summer Plans",
+                content: "What are your plans for summer? Are you going to travel? Are you going to learn something new?",
+                question: "What are you going to do this summer?"
+            }
+        },
+        // Week 6: Unit 11 - Family Time
+        {
+            day: 20, title: "Bắt đầu Unit 11 - Family Time",
+            pronunciation: { words: ["beach", "swim", "did", "went"] },
+            vocabulary: { 
+                unit: 11, 
+                topic: "Past Simple Verbs",
+                words: [
+                    { word: "beach", phonetic: "/biːtʃ/", vietnamese: "bãi biển", example: "Go to the beach." },
+                    { word: "swim", phonetic: "/swɪm/", vietnamese: "bơi", example: "Swim in the sea." },
+                    { word: "did", phonetic: "/dɪd/", vietnamese: "đã làm", example: "Did you swim?" },
+                    { word: "went", phonetic: "/went/", vietnamese: "đã đi", example: "We went to the beach." }
+                ]
+            },
+            grammar: { 
+                unit: 11,
+                point: "Thì quá khứ đơn: Did + V?",
+                explanation: "Did you + động từ nguyên thể? Trả lời: Yes, I did. / No, I didn't."
+            },
+            reading: {
+                title: "Last Weekend",
+                content: "Last weekend, my family went to the beach. We swam in the sea. It was fun!",
+                question: "Did you go anywhere last weekend?"
+            }
+        },
+        {
+            day: 21, title: "Unit 11 - More past tense verbs",
+            pronunciation: { words: ["took photos", "collect seashells", "walk", "bought"] },
+            vocabulary: { 
+                unit: 11, 
+                topic: "Past Activities",
+                words: [
+                    { word: "took photos", phonetic: "/tʊk ˈfəʊtəʊz/", vietnamese: "đã chụp ảnh", example: "Took photos with dad." },
+                    { word: "collect seashells", phonetic: "/kəˈlekt ˈsiːʃelz/", vietnamese: "nhặt vỏ sò", example: "Collect seashells." },
+                    { word: "bought", phonetic: "/bɔːt/", vietnamese: "đã mua", example: "Bought souvenirs." }
+                ]
+            },
+            grammar: { 
+                unit: 11,
+                point: "Thì quá khứ đơn: V2 (went, took, bought)",
+                explanation: "Động từ quá khứ bất quy tắc: go→went, take→took, buy→bought."
+            },
+            reading: {
+                title: "Beach Trip",
+                content: "We took photos. We collected seashells. We bought souvenirs. It was a great trip.",
+                question: "What did you do at the beach?"
+            }
+        },
+        {
+            day: 22, title: "Unit 11 - Family activities",
+            pronunciation: { words: ["family", "together", "journey", "fun"] },
+            vocabulary: { 
+                unit: 11, 
+                topic: "Family Time",
+                words: [
+                    { word: "souvenir", phonetic: "/ˌsuːvəˈnɪər/", vietnamese: "quà lưu niệm", example: "Buy souvenirs." },
+                    { word: "journey", phonetic: "/ˈdʒɜːni/", vietnamese: "hành trình", example: "Long journey." },
+                    { word: "family", phonetic: "/ˈfæməli/", vietnamese: "gia đình", example: "With my family." }
+                ]
+            },
+            grammar: { 
+                unit: 11,
+                point: "Where did your family go?",
+                explanation: "Hỏi về nơi gia đình đã đi. Trả lời: We went to + địa điểm."
+            },
+            reading: {
+                title: "Family Journey",
+                content: "The journey took a long time, but we had lots of fun. We enjoyed our family time together.",
+                question: "What do you like doing with your family?"
+            }
+        },
+        {
+            day: 23, title: "Unit 11 - Review Past Simple",
+            pronunciation: { words: ["did", "went", "took", "bought", "swam"] },
+            vocabulary: { 
+                unit: 11, 
+                topic: "Past Simple Review",
+                words: [
+                    { word: "did", phonetic: "/dɪd/", vietnamese: "đã làm", example: "Did you go?" },
+                    { word: "went", phonetic: "/went/", vietnamese: "đã đi", example: "We went to the beach." },
+                    { word: "took", phonetic: "/tʊk/", vietnamese: "đã chụp", example: "Took photos." },
+                    { word: "bought", phonetic: "/bɔːt/", vietnamese: "đã mua", example: "Bought souvenirs." }
+                ]
+            },
+            grammar: { 
+                unit: 11,
+                point: "Ôn tập: Did + V? / V2 (went, took, bought)",
+                explanation: "Thì quá khứ đơn: câu hỏi và động từ bất quy tắc."
+            },
+            reading: {
+                title: "Past Adventures",
+                content: "Last summer, we went to many places. We took photos. We bought souvenirs. We had great fun!",
+                question: "What did you do last summer?"
+            }
+        },
+        // Week 7-8: Mixed Review and Practice
+        {
+            day: 24, title: "Ôn tập Unit 16 - Seasons",
+            pronunciation: { words: ["spring", "summer", "autumn", "winter", "warm", "hot", "cold", "cool"] },
+            vocabulary: { 
+                unit: 16, 
+                topic: "Seasons Review",
+                words: [
+                    { word: "spring", phonetic: "/sprɪŋ/", vietnamese: "mùa xuân", example: "It's warm in spring." },
+                    { word: "autumn", phonetic: "/ˈɔːtəm/", vietnamese: "mùa thu", example: "It's cool in autumn." },
+                    { word: "jumper", phonetic: "/ˈdʒʌmpər/", vietnamese: "áo len", example: "Wear a jumper in winter." }
+                ]
+            },
+            grammar: { 
+                unit: 16,
+                point: "Ôn tập: How's the weather? / in + season",
+                explanation: "Hỏi thời tiết và giới từ chỉ mùa."
+            },
+            reading: {
+                title: "Four Seasons Review",
+                content: "Spring is warm. Summer is hot. Autumn is cool. Winter is cold. Each season is special.",
+                question: "Which season do you like best?"
+            }
+        },
+        {
+            day: 25, title: "Ôn tập Unit 14+15 - Health",
+            pronunciation: { words: ["headache", "toothache", "sore throat", "fever", "should", "shouldn't"] },
+            vocabulary: { 
+                unit: "14-15", 
+                topic: "Health Review",
+                words: [
+                    { word: "headache", phonetic: "/ˈhedeɪk/", vietnamese: "đau đầu", example: "I have a headache." },
+                    { word: "toothache", phonetic: "/ˈtuːθeɪk/", vietnamese: "đau răng", example: "I have a toothache." },
+                    { word: "should", phonetic: "/ʃʊd/", vietnamese: "nên", example: "You should rest." }
+                ]
+            },
+            grammar: { 
+                unit: "14-15",
+                point: "Ôn tập: What's the matter? / Should/Shouldn't",
+                explanation: "Hỏi về sức khỏe và đưa ra lời khuyên."
+            },
+            reading: {
+                title: "Stay Healthy",
+                content: "If you have a headache, you should rest. If you have a toothache, you should see a dentist.",
+                question: "What should you do to stay healthy?"
+            }
+        },
+        {
+            day: 26, title: "Ôn tập Unit 18 - Transport",
+            pronunciation: { words: ["bus", "taxi", "bicycle", "train", "ferry", "on foot"] },
+            vocabulary: { 
+                unit: 18, 
+                topic: "Transport Review",
+                words: [
+                    { word: "bus", phonetic: "/bʌs/", vietnamese: "xe buýt", example: "I go by bus." },
+                    { word: "taxi", phonetic: "/ˈtæksi/", vietnamese: "xe taxi", example: "Take a taxi." },
+                    { word: "on foot", phonetic: "/ɒn fʊt/", vietnamese: "đi bộ", example: "I go on foot." }
+                ]
+            },
+            grammar: { 
+                unit: 18,
+                point: "Ôn tập: How can I get to...? / Is it far?",
+                explanation: "Hỏi đường và hỏi khoảng cách."
+            },
+            reading: {
+                title: "Getting Around",
+                content: "You can travel by bus, taxi, bicycle, or on foot. Check if it's far or near before you go.",
+                question: "How do you go to school?"
+            }
+        },
+        {
+            day: 27, title: "Ôn tập Unit 19 - Places",
+            pronunciation: { words: ["beautiful", "exciting", "fantastic", "peaceful", "far", "near", "kilometre"] },
+            vocabulary: { 
+                unit: 19, 
+                topic: "Places Review",
+                words: [
+                    { word: "fantastic", phonetic: "/fænˈtæstɪk/", vietnamese: "tuyệt vời", example: "It's fantastic." },
+                    { word: "peaceful", phonetic: "/ˈpiːsfl/", vietnamese: "yên bình", example: "It's peaceful." },
+                    { word: "kilometre", phonetic: "/kɪˈlɒmɪtər/", vietnamese: "ki-lô-mét", example: "It's 10 kilometres." }
+                ]
+            },
+            grammar: { 
+                unit: 19,
+                point: "Ôn tập: What do you think of...? / How far is it...?",
+                explanation: "Hỏi ý kiến và hỏi khoảng cách."
+            },
+            reading: {
+                title: "Beautiful Places",
+                content: "Ha Long Bay is fantastic. The beach is beautiful. It's about 100 kilometres from here.",
+                question: "What do you think of Ha Long Bay?"
+            }
+        },
+        {
+            day: 28, title: "Ôn tập Unit 20 - Summer",
+            pronunciation: { words: ["summer holiday", "going to", "go camping", "join a club"] },
+            vocabulary: { 
+                unit: 20, 
+                topic: "Summer Review",
+                words: [
+                    { word: "summer holiday", phonetic: "/ˈsʌmər ˈhɒlədeɪ/", vietnamese: "kỳ nghỉ hè", example: "I love summer holiday." },
+                    { word: "going to", phonetic: "/ˈɡəʊɪŋ tuː/", vietnamese: "sẽ/định", example: "I'm going to camp." },
+                    { word: "go camping", phonetic: "/ɡəʊ ˈkæmpɪŋ/", vietnamese: "đi cắm trại", example: "We go camping." }
+                ]
+            },
+            grammar: { 
+                unit: 20,
+                point: "Ôn tập: Be going to + động từ",
+                explanation: "Diễn tả dự định trong tương lai gần."
+            },
+            reading: {
+                title: "Summer Plans",
+                content: "I'm going to go camping. I'm going to visit Phu Quoc. It will be a great summer!",
+                question: "What are you going to do this summer?"
+            }
+        },
+        {
+            day: 29, title: "Ôn tập Unit 11 - Past Simple",
+            pronunciation: { words: ["did", "went", "took", "bought", "swam", "last weekend"] },
+            vocabulary: { 
+                unit: 11, 
+                topic: "Past Simple Review",
+                words: [
+                    { word: "did", phonetic: "/dɪd/", vietnamese: "đã làm", example: "Did you go?" },
+                    { word: "went", phonetic: "/went/", vietnamese: "đã đi", example: "We went to the beach." },
+                    { word: "took", phonetic: "/tʊk/", vietnamese: "đã chụp", example: "Took photos." }
+                ]
+            },
+            grammar: { 
+                unit: 11,
+                point: "Ôn tập: Did + V? / V2 (went, took, bought)",
+                explanation: "Thì quá khứ đơn: câu hỏi và động từ bất quy tắc."
+            },
+            reading: {
+                title: "Past Memories",
+                content: "Last weekend, we went to the beach. We took photos. We bought souvenirs. It was fun!",
+                question: "What did you do last weekend?"
+            }
+        },
+        // Week 9-10: Final Review and Test Preparation
+        {
+            day: 30, title: "Ôn tập tổng hợp - Phần Ngữ âm",
+            pronunciation: { words: ["beach", "read", "weather", "mean", "summer", "winter", "autumn"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Phonetics Review",
+                words: [
+                    { word: "beach", phonetic: "/biːtʃ/", vietnamese: "bãi biển", example: "Go to the beach." },
+                    { word: "weather", phonetic: "/ˈweðər/", vietnamese: "thời tiết", example: "How's the weather?" },
+                    { word: "autumn", phonetic: "/ˈɔːtəm/", vietnamese: "mùa thu", example: "Autumn is cool." }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Ôn tập phát âm: /iː/ vs /e/, /ʌ/ vs /ɒ/",
+                explanation: "Chú ý các âm khác nhau trong từ vựng đã học."
+            },
+            reading: {
+                title: "Phonetics Practice",
+                content: "Read these words carefully: beach, weather, autumn, summer. Pay attention to pronunciation.",
+                question: "Which words have the same sound?"
+            }
+        },
+        {
+            day: 31, title: "Ôn tập tổng hợp - Phần Từ vựng",
+            pronunciation: { words: ["season", "health", "transport", "place", "holiday", "family"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Vocabulary Review",
+                words: [
+                    { word: "season", phonetic: "/ˈsiːzn/", vietnamese: "mùa", example: "Four seasons." },
+                    { word: "health", phonetic: "/helθ/", vietnamese: "sức khỏe", example: "Stay healthy." },
+                    { word: "transport", phonetic: "/ˈtrænspɔːt/", vietnamese: "phương tiện", example: "By bus." }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Ôn tập từ vựng 6 Unit",
+                explanation: "Xem lại các từ vựng quan trọng từ Unit 16, 14+15, 18, 19, 20, 11."
+            },
+            reading: {
+                title: "Vocabulary Check",
+                content: "Can you remember words from all units? Review them before the test.",
+                question: "Which words are difficult for you?"
+            }
+        },
+        {
+            day: 32, title: "Ôn tập tổng hợp - Phần Ngữ pháp",
+            pronunciation: { words: ["should", "going to", "did", "in", "by"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Grammar Review",
+                words: [
+                    { word: "should", phonetic: "/ʃʊd/", vietnamese: "nên", example: "You should study." },
+                    { word: "did", phonetic: "/dɪd/", vietnamese: "đã làm", example: "Did you go?" },
+                    { word: "going to", phonetic: "/ˈɡəʊɪŋ tuː/", vietnamese: "sẽ", example: "I'm going to study." }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Ôn tập: Should/Shouldn't, Be going to, Past Simple, Prepositions",
+                explanation: "Xem lại các điểm ngữ pháp quan trọng: should/shouldn't, be going to, thì quá khứ, giới từ."
+            },
+            reading: {
+                title: "Grammar Check",
+                content: "Review these grammar points: should/shouldn't, be going to, past simple, prepositions (in, by, on).",
+                question: "Which grammar point is difficult for you?"
+            }
+        },
+        {
+            day: 33, title: "Luyện đề - Phần A: Ngữ âm",
+            pronunciation: { words: ["phonetics", "sound", "pronunciation", "different"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Test Practice - Phonetics",
+                words: [
+                    { word: "phonetics", phonetic: "/fəˈnetɪks/", vietnamese: "ngữ âm", example: "Phonetics test." },
+                    { word: "pronunciation", phonetic: "/prəˌnʌnsiˈeɪʃn/", vietnamese: "phát âm", example: "Good pronunciation." }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Luyện tập câu hỏi ngữ âm",
+                explanation: "Chọn từ có phần gạch chân phát âm khác. Luyện tập các cặp âm: /iː/ vs /e/, /ʌ/ vs /ʊ/, /ɒ/ vs /əʊ/."
+            },
+            reading: {
+                title: "Phonetics Test Prep",
+                content: "Practice phonetics questions. Listen carefully to the sounds. Choose the word with different pronunciation.",
+                question: "Are you ready for the phonetics section?"
+            }
+        },
+        {
+            day: 34, title: "Luyện đề - Phần B & C: Từ vựng, Ngữ pháp, Đọc hiểu",
+            pronunciation: { words: ["vocabulary", "grammar", "reading", "comprehension"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Test Practice - All Skills",
+                words: [
+                    { word: "vocabulary", phonetic: "/vəˈkæbjələri/", vietnamese: "từ vựng", example: "Learn vocabulary." },
+                    { word: "grammar", phonetic: "/ˈɡræmər/", vietnamese: "ngữ pháp", example: "Study grammar." },
+                    { word: "comprehension", phonetic: "/ˌkɒmprɪˈhenʃn/", vietnamese: "đọc hiểu", example: "Reading comprehension." }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Luyện tập câu hỏi từ vựng, ngữ pháp, đọc hiểu",
+                explanation: "Làm bài tập từ vựng, ngữ pháp và đọc hiểu. Đọc kỹ câu hỏi trước khi trả lời."
+            },
+            reading: {
+                title: "Test Practice",
+                content: "Practice vocabulary, grammar, and reading comprehension questions. Read the passages carefully.",
+                question: "Do you feel ready for the test?"
+            }
+        },
+        {
+            day: 35, title: "Ôn tập cuối cùng và Chill",
+            pronunciation: { words: ["relax", "confidence", "ready", "success"] },
+            vocabulary: { 
+                unit: "review", 
+                topic: "Final Review",
+                words: [
+                    { word: "relax", phonetic: "/rɪˈlæks/", vietnamese: "thư giãn", example: "Relax before test." },
+                    { word: "confidence", phonetic: "/ˈkɒnfɪdəns/", vietnamese: "sự tự tin", example: "Have confidence." },
+                    { word: "success", phonetic: "/səkˈses/", vietnamese: "thành công", example: "You will succeed!" }
+                ]
+            },
+            grammar: { 
+                unit: "review",
+                point: "Tổng kết và chuẩn bị tâm lý",
+                explanation: "Ôn lại những điểm quan trọng. Giữ tâm lý thoải mái. Tự tin vào khả năng của mình."
+            },
+            reading: {
+                title: "You Can Do It!",
+                content: "You have studied hard for 35 days. You learned many new words and grammar points. You are ready for the test. Good luck!",
+                question: "How do you feel about the test?"
+            }
         }
     ];
     
-    // Find content for the specific day, or use default
+    // Find content for the specific day
     const dayData = roadmap.find(item => item.day === day);
     
     if (dayData) {
         return dayData;
     }
     
-    // Default content for days not specifically planned
+    // Fallback for any day not in roadmap (should not happen with 35 days)
     return {
-        title: "Ôn tập và luyện tập",
-        pronunciation: { words: ["review", "practice", "learn"] },
+        title: "Ôn tập tổng hợp",
+        pronunciation: { words: ["review", "practice"] },
         vocabulary: { 
             unit: "review", 
-            topic: "Ôn tập từ vựng",
+            topic: "Ôn tập",
             words: [
-                { word: "review", phonetic: "/rɪˈvjuː/", vietnamese: "ôn lại", example: "Review your lessons." },
-                { word: "practice", phonetic: "/ˈpræktɪs/", vietnamese: "luyện tập", example: "Practice English every day." }
+                { word: "review", phonetic: "/rɪˈvjuː/", vietnamese: "ôn lại", example: "Review your lessons." }
             ]
         },
         grammar: { 
             unit: "review",
-            point: "Ôn tập ngữ pháp",
-            explanation: "Hãy xem lại các điểm ngữ pháp đã học."
+            point: "Ôn tập",
+            explanation: "Hãy xem lại các bài học."
         },
         reading: {
-            title: "Daily Reading",
-            content: "Reading helps you learn new words and improve your English. Try to read something every day.",
-            question: "Why is reading important?"
+            title: "Review",
+            content: "Keep learning and practicing every day.",
+            question: "What did you learn today?"
         }
     };
 }
@@ -1548,4 +2946,456 @@ window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = 'none';
     }
+}
+
+// ==================== NEW EXERCISE TYPES ====================
+
+// Reading Comprehension Functions
+function startReadingComprehension() {
+    currentReadingIndex = 0;
+    readingAnswers = [];
+    
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.id = 'reading-modal';
+    modal.style.display = 'block';
+    
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3>📖 Đọc Hiểu (Reading Comprehension)</h3>
+                <button class="close-btn" onclick="closeModal('reading-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="reading-selector">
+                    <p>Chọn bài đọc:</p>
+                    ${learningData.readingComprehension.map((rc, index) => `
+                        <button class="btn btn-secondary" onclick="showReadingExercise(${index})">${rc.title}</button>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+}
+
+function showReadingExercise(index) {
+    currentReadingIndex = index;
+    readingAnswers = [];
+    const exercise = learningData.readingComprehension[index];
+    
+    const modal = document.getElementById('reading-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    
+    modalBody.innerHTML = `
+        <div class="reading-exercise">
+            <h4>${exercise.title}</h4>
+            <div class="reading-passage">
+                <p>${exercise.passage}</p>
+            </div>
+            <div class="reading-questions">
+                ${exercise.questions.map((q, qIndex) => `
+                    <div class="reading-question" id="reading-q-${qIndex}">
+                        <p><strong>Câu ${qIndex + 1}:</strong> ${q.question}</p>
+                        ${q.type === 'trueFalse' ? `
+                            <div class="true-false-options">
+                                <button class="btn btn-secondary" onclick="selectReadingAnswer(${qIndex}, true)">True (Đúng)</button>
+                                <button class="btn btn-secondary" onclick="selectReadingAnswer(${qIndex}, false)">False (Sai)</button>
+                            </div>
+                        ` : `
+                            <input type="text" class="answer-input" id="reading-input-${qIndex}" placeholder="Nhập câu trả lời...">
+                        `}
+                        <div class="explanation" id="reading-explanation-${qIndex}" style="display: none;">
+                            <p><strong>Giải thích:</strong> ${q.explanation}</p>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="reading-actions">
+                <button class="btn btn-primary" onclick="checkReadingAnswers()">Kiểm tra đáp án</button>
+                <button class="btn btn-secondary" onclick="startReadingComprehension()">Chọn bài khác</button>
+            </div>
+        </div>
+    `;
+}
+
+function selectReadingAnswer(questionIndex, answer) {
+    readingAnswers[questionIndex] = answer;
+    
+    // Update button styles
+    const questionDiv = document.getElementById(`reading-q-${questionIndex}`);
+    const buttons = questionDiv.querySelectorAll('.true-false-options button');
+    buttons.forEach(btn => btn.classList.remove('selected'));
+    buttons[answer ? 0 : 1].classList.add('selected');
+}
+
+function checkReadingAnswers() {
+    const exercise = learningData.readingComprehension[currentReadingIndex];
+    let correctCount = 0;
+    
+    exercise.questions.forEach((q, qIndex) => {
+        const userAnswer = readingAnswers[qIndex];
+        const isCorrect = userAnswer === q.correct;
+        
+        if (isCorrect) {
+            correctCount++;
+        } else {
+            // Save error
+            saveError({
+                type: 'reading',
+                question: q.question,
+                userAnswer: userAnswer !== undefined ? (userAnswer ? 'True' : 'False') : 'Không trả lời',
+                correctAnswer: q.correct ? 'True' : 'False',
+                explanation: q.explanation,
+                timestamp: new Date().toISOString()
+            });
+        }
+        
+        // Show explanation
+        document.getElementById(`reading-explanation-${qIndex}`).style.display = 'block';
+        
+        // Highlight correct/incorrect
+        const questionDiv = document.getElementById(`reading-q-${qIndex}`);
+        if (q.type === 'trueFalse') {
+            const buttons = questionDiv.querySelectorAll('.true-false-options button');
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                if ((i === 0 && q.correct) || (i === 1 && !q.correct)) {
+                    btn.classList.add('correct');
+                }
+                if (userAnswer !== undefined && ((i === 0 && userAnswer !== q.correct) || (i === 1 && userAnswer === q.correct))) {
+                    btn.classList.add('incorrect');
+                }
+            });
+        }
+    });
+    
+    // Save progress
+    saveExerciseProgress('reading', currentReadingIndex, correctCount, exercise.questions.length);
+    
+    alert(`Bạn làm đúng ${correctCount}/${exercise.questions.length} câu!`);
+}
+
+// Matching Exercise Functions
+function startMatchingExercise() {
+    currentMatchingIndex = 0;
+    matchingAnswers = {};
+    
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.id = 'matching-modal';
+    modal.style.display = 'block';
+    
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3>🔗 Ghép Cặp Câu Hỏi - Câu Trả Lời (Matching)</h3>
+                <button class="close-btn" onclick="closeModal('matching-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="matching-selector">
+                    <p>Chọn bộ ghép:</p>
+                    ${learningData.matchingExercises.map((me, index) => `
+                        <button class="btn btn-secondary" onclick="showMatchingExercise(${index})">${me.title}</button>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+}
+
+function showMatchingExercise(index) {
+    currentMatchingIndex = index;
+    matchingAnswers = {};
+    const exercise = learningData.matchingExercises[index];
+    
+    // Shuffle column B
+    const shuffledB = [...exercise.columnB].sort(() => Math.random() - 0.5);
+    
+    const modal = document.getElementById('matching-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    
+    modalBody.innerHTML = `
+        <div class="matching-exercise">
+            <h4>${exercise.title}</h4>
+            <p class="exercise-instruction">${exercise.explanation}</p>
+            <div class="matching-columns">
+                <div class="matching-column column-a">
+                    <h5>Cột A (Câu hỏi)</h5>
+                    ${exercise.columnA.map((item, index) => `
+                        <div class="matching-item" data-a="${index + 1}">${item}</div>
+                    `).join('')}
+                </div>
+                <div class="matching-column column-b">
+                    <h5>Cột B (Câu trả lời)</h5>
+                    ${shuffledB.map((item, index) => `
+                        <div class="matching-item" data-b="${String.fromCharCode(97 + index)}">${item}</div>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="matching-input">
+                <p>Nhập đáp án (ví dụ: 1-a, 2-b, 3-c):</p>
+                <input type="text" class="answer-input" id="matching-answer" placeholder="1-a, 2-b, 3-c">
+            </div>
+            <div class="matching-actions">
+                <button class="btn btn-primary" onclick="checkMatchingAnswers()">Kiểm tra đáp án</button>
+                <button class="btn btn-secondary" onclick="startMatchingExercise()">Chọn bộ khác</button>
+            </div>
+            <div class="matching-result" id="matching-result" style="display: none;"></div>
+        </div>
+    `;
+}
+
+function checkMatchingAnswers() {
+    const exercise = learningData.matchingExercises[currentMatchingIndex];
+    const input = document.getElementById('matching-answer').value;
+    const resultDiv = document.getElementById('matching-result');
+    
+    // Parse answers
+    const userAnswers = {};
+    input.split(',').forEach(pair => {
+        const [a, b] = pair.trim().split('-');
+        if (a && b) {
+            userAnswers[a] = b;
+        }
+    });
+    
+    let correctCount = 0;
+    let resultHTML = '<h4>Kết quả:</h4><ul>';
+    
+    Object.keys(exercise.correctAnswers).forEach(a => {
+        const correct = exercise.correctAnswers[a];
+        const user = userAnswers[a];
+        const isCorrect = user === correct;
+        
+        if (isCorrect) {
+            correctCount++;
+        } else {
+            // Save error
+            saveError({
+                type: 'matching',
+                question: exercise.columnA[parseInt(a) - 1],
+                userAnswer: user ? exercise.columnB[parseInt(user.charCodeAt(0) - 97)] : 'Không trả lời',
+                correctAnswer: exercise.columnB[parseInt(correct.charCodeAt(0) - 97)],
+                explanation: exercise.explanation,
+                timestamp: new Date().toISOString()
+            });
+        }
+        
+        resultHTML += `
+            <li class="${isCorrect ? 'correct' : 'incorrect'}">
+                ${a}. ${exercise.columnA[parseInt(a) - 1]} → ${user ? user : '(chưa chọn)'} 
+                ${isCorrect ? '✅' : '❌ (Đáp án: ' + correct + ')'}
+            </li>
+        `;
+    });
+    
+    resultHTML += '</ul>';
+    resultDiv.innerHTML = resultHTML;
+    resultDiv.style.display = 'block';
+    
+    // Save progress
+    saveExerciseProgress('matching', currentMatchingIndex, correctCount, Object.keys(exercise.correctAnswers).length);
+    
+    alert(`Bạn ghép đúng ${correctCount}/${Object.keys(exercise.correctAnswers).length} cặp!`);
+}
+
+// Sentence Rearrangement Functions
+function startSentenceRearrangement() {
+    currentSentenceIndex = 0;
+    currentSentenceExerciseIndex = 0;
+    sentenceAnswers = [];
+    
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.id = 'sentence-modal';
+    modal.style.display = 'block';
+    
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h3>🔤 Sắp Xếp Từ Thành Câu (Sentence Rearrangement)</h3>
+                <button class="close-btn" onclick="closeModal('sentence-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="sentence-selector">
+                    <p>Chọn bài sắp xếp:</p>
+                    ${learningData.sentenceRearrangement.map((sr, index) => `
+                        <button class="btn btn-secondary" onclick="showSentenceExercise(${index})">${sr.title}</button>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+}
+
+function showSentenceExercise(exerciseIndex) {
+    currentSentenceExerciseIndex = exerciseIndex;
+    currentSentenceIndex = 0;
+    sentenceAnswers = [];
+    const exercise = learningData.sentenceRearrangement[exerciseIndex];
+    
+    const modal = document.getElementById('sentence-modal');
+    const modalBody = modal.querySelector('.modal-body');
+    
+    modalBody.innerHTML = `
+        <div class="sentence-exercise">
+            <h4>${exercise.title}</h4>
+            <p class="exercise-instruction">Click vào các từ để sắp xếp hoặc gõ câu trả lời trực tiếp vào ô bên dưới. Chữ hoa/thường không ảnh hưởng đến kết quả.</p>
+            <div class="sentence-words" id="sentence-words"></div>
+            <div class="sentence-answer">
+                <input type="text" class="answer-input" id="sentence-input" placeholder="Nhập câu đã sắp xếp...">
+                <button class="btn btn-small btn-clear" onclick="clearSentenceInput()">🗑️ Xóa</button>
+            </div>
+            <div class="sentence-actions">
+                <button class="btn btn-primary" onclick="checkSentenceAnswer()">Kiểm tra</button>
+                <button class="btn btn-secondary" onclick="nextSentence()">Câu tiếp theo</button>
+                <button class="btn btn-secondary" onclick="showSentence(${currentSentenceIndex})">Làm lại</button>
+                <button class="btn btn-secondary" onclick="startSentenceRearrangement()">Chọn bài khác</button>
+            </div>
+            <div class="sentence-result" id="sentence-result" style="display: none;"></div>
+            <div class="sentence-counter">Câu ${currentSentenceIndex + 1}/${exercise.sentences.length}</div>
+        </div>
+    `;
+    
+    showSentence(currentSentenceIndex);
+}
+
+function showSentence(index) {
+    currentSentenceIndex = index;
+    const exercise = learningData.sentenceRearrangement[currentSentenceExerciseIndex];
+    const sentence = exercise.sentences[index];
+    
+    const wordsDiv = document.getElementById('sentence-words');
+    const words = sentence.scrambled.split(' / ');
+    
+    wordsDiv.innerHTML = words.map((word, i) => `
+        <span class="word-chip" onclick="addWordToAnswer('${word}', this)">${word}</span>
+    `).join('');
+    
+    document.getElementById('sentence-input').value = '';
+    document.getElementById('sentence-result').style.display = 'none';
+    document.querySelector('.sentence-counter').textContent = `Câu ${currentSentenceIndex + 1}/${exercise.sentences.length}`;
+}
+
+function addWordToAnswer(word, element) {
+    const input = document.getElementById('sentence-input');
+    input.value = input.value ? input.value + ' ' + word : word;
+    element.style.opacity = '0.5';
+    element.onclick = null;
+}
+
+function clearSentenceInput() {
+    document.getElementById('sentence-input').value = '';
+    document.getElementById('sentence-result').style.display = 'none';
+    
+    // Reset all word chips
+    const wordChips = document.querySelectorAll('.word-chip');
+    wordChips.forEach(chip => {
+        chip.style.opacity = '1';
+        chip.onclick = function() {
+            addWordToAnswer(chip.textContent, chip);
+        };
+    });
+}
+
+function checkSentenceAnswer() {
+    const exercise = learningData.sentenceRearrangement[currentSentenceExerciseIndex];
+    const sentence = exercise.sentences[currentSentenceIndex];
+    const userAnswer = document.getElementById('sentence-input').value.trim();
+    const resultDiv = document.getElementById('sentence-result');
+    
+    // Normalize both answers for comparison (remove extra spaces, remove punctuation, convert to lowercase)
+    const normalizeAnswer = (text) => {
+        return text
+            .replace(/[.,!?;:]/g, '') // Remove punctuation
+            .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+            .toLowerCase()
+            .trim();
+    };
+    
+    const normalizedUserAnswer = normalizeAnswer(userAnswer);
+    const normalizedCorrectAnswer = normalizeAnswer(sentence.correct);
+    
+    console.log('User answer:', userAnswer, '->', normalizedUserAnswer);
+    console.log('Correct answer:', sentence.correct, '->', normalizedCorrectAnswer);
+    
+    const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
+    
+    if (isCorrect) {
+        resultDiv.innerHTML = `
+            <p class="correct">✅ Chính xác!</p>
+            <p><strong>Câu đúng:</strong> ${sentence.correct}</p>
+            <p><strong>Giải thích:</strong> ${sentence.explanation}</p>
+        `;
+        sentenceAnswers[currentSentenceIndex] = true;
+    } else {
+        resultDiv.innerHTML = `
+            <p class="incorrect">❌ Chưa chính xác!</p>
+            <p><strong>Câu của bạn:</strong> ${userAnswer}</p>
+            <p><strong>Câu đúng:</strong> ${sentence.correct}</p>
+            <p><strong>Giải thích:</strong> ${sentence.explanation}</p>
+        `;
+        sentenceAnswers[currentSentenceIndex] = false;
+        
+        // Save error
+        saveError({
+            type: 'sentence',
+            question: sentence.scrambled,
+            userAnswer: userAnswer,
+            correctAnswer: sentence.correct,
+            explanation: sentence.explanation,
+            timestamp: new Date().toISOString()
+        });
+    }
+    
+    resultDiv.style.display = 'block';
+    
+    // Save progress
+    const correctCount = sentenceAnswers.filter(a => a === true).length;
+    saveExerciseProgress('sentence', currentSentenceExerciseIndex, correctCount, exercise.sentences.length);
+}
+
+function nextSentence() {
+    const exercise = learningData.sentenceRearrangement[currentSentenceExerciseIndex];
+    if (currentSentenceIndex < exercise.sentences.length - 1) {
+        showSentence(currentSentenceIndex + 1);
+    } else {
+        const correctCount = sentenceAnswers.filter(a => a === true).length;
+        alert(`Bạn đã làm xong! Số câu đúng: ${correctCount}/${exercise.sentences.length}`);
+        closeModal('sentence-modal');
+    }
+}
+
+// Save exercise progress to localStorage
+function saveExerciseProgress(type, exerciseId, correct, total) {
+    const progress = JSON.parse(localStorage.getItem('exerciseProgress') || '{}');
+    
+    if (!progress[type]) {
+        progress[type] = {};
+    }
+    
+    progress[type][exerciseId] = {
+        correct: correct,
+        total: total,
+        timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem('exerciseProgress', JSON.stringify(progress));
+}
+
+// Load exercise progress from localStorage
+function loadExerciseProgress(type, exerciseId) {
+    const progress = JSON.parse(localStorage.getItem('exerciseProgress') || '{}');
+    
+    if (progress[type] && progress[type][exerciseId]) {
+        return progress[type][exerciseId];
+    }
+    
+    return null;
 }

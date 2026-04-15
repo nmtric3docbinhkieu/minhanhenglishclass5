@@ -39,6 +39,7 @@
             <div class="tab-nav">
                 <button class="tab-btn active" data-tab="roadmap">📅 Học theo lộ trình</button>
                 <button class="tab-btn" data-tab="units">📚 Unit cần học</button>
+                <button class="tab-btn" data-tab="exercises">🎯 Bài tập mới</button>
                 <button class="tab-btn" data-tab="mocktest">📝 Thi thử</button>
                 <button class="tab-btn" data-tab="errors">📝 Sổ tay lỗi sai</button>
             </div>
@@ -128,10 +129,77 @@
                                 <button class="btn btn-secondary" onclick="openUnit(11, 'quiz')">📝 Trắc nghiệm</button>
                             </div>
                         </div>
+
+                        <div class="unit-card low-priority" data-unit="12">
+                            <div class="unit-header">
+                                <span class="unit-title">Unit 12</span>
+                                <span class="priority-badge low">🟢 Bình thường</span>
+                            </div>
+                            <p class="unit-desc">My School</p>
+                            <div class="unit-actions">
+                                <button class="btn btn-primary" onclick="openUnit(12, 'flashcard')">📚 Flashcard</button>
+                                <button class="btn btn-secondary" onclick="openUnit(12, 'quiz')">📝 Trắc nghiệm</button>
+                            </div>
+                        </div>
+
+                        <div class="unit-card low-priority" data-unit="13">
+                            <div class="unit-header">
+                                <span class="unit-title">Unit 13</span>
+                                <span class="priority-badge low">🟢 Bình thường</span>
+                            </div>
+                            <p class="unit-desc">My Friends</p>
+                            <div class="unit-actions">
+                                <button class="btn btn-primary" onclick="openUnit(13, 'flashcard')">📚 Flashcard</button>
+                                <button class="btn btn-secondary" onclick="openUnit(13, 'quiz')">📝 Trắc nghiệm</button>
+                            </div>
+                        </div>
+
+                        <div class="unit-card low-priority" data-unit="17">
+                            <div class="unit-header">
+                                <span class="unit-title">Unit 17</span>
+                                <span class="priority-badge low">🟢 Bình thường</span>
+                            </div>
+                            <p class="unit-desc">Our Pets</p>
+                            <div class="unit-actions">
+                                <button class="btn btn-primary" onclick="openUnit(17, 'flashcard')">📚 Flashcard</button>
+                                <button class="btn btn-secondary" onclick="openUnit(17, 'quiz')">📝 Trắc nghiệm</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Tab 3: Mock Test -->
+                <!-- Tab 3: New Exercises -->
+                <div class="tab-pane" id="exercises">
+                    <h2>Bài tập mới</h2>
+                    <p class="section-desc">Luyện tập 3 dạng bài tập phổ biến trong đề thi</p>
+                    <div class="exercises-grid">
+                        <div class="exercise-card">
+                            <div class="exercise-icon">📖</div>
+                            <h3>Đọc Hiểu</h3>
+                            <p>Reading Comprehension</p>
+                            <p class="exercise-desc">Đọc đoạn văn ngắn và trả lời câu hỏi True/False hoặc câu hỏi ngắn</p>
+                            <button class="btn btn-primary" onclick="startReadingComprehension()">Bắt đầu</button>
+                        </div>
+
+                        <div class="exercise-card">
+                            <div class="exercise-icon">🔗</div>
+                            <h3>Ghép Cặp</h3>
+                            <p>Matching</p>
+                            <p class="exercise-desc">Ghép câu hỏi với câu trả lời phù hợp</p>
+                            <button class="btn btn-primary" onclick="startMatchingExercise()">Bắt đầu</button>
+                        </div>
+
+                        <div class="exercise-card">
+                            <div class="exercise-icon">🔤</div>
+                            <h3>Sắp Xếp Câu</h3>
+                            <p>Sentence Rearrangement</p>
+                            <p class="exercise-desc">Sắp xếp các từ bị xáo trộn thành câu hoàn chỉnh</p>
+                            <button class="btn btn-primary" onclick="startSentenceRearrangement()">Bắt đầu</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Mock Test -->
                 <div class="tab-pane" id="mocktest">
                     <h2>Đề thi thử học kỳ 2</h2>
                     <div class="mocktest-container">
@@ -143,7 +211,7 @@
                     </div>
                 </div>
 
-                <!-- Tab 4: Error Notebook -->
+                <!-- Tab 5: Error Notebook -->
                 <div class="tab-pane" id="errors">
                     <h2>Sổ tay lỗi sai</h2>
                     <div class="error-container">
