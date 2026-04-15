@@ -383,6 +383,69 @@ const learningData = {
                     explanation: "\"Swam\", \"took\", \"bought\" đều là động từ ở thì quá khứ (V2). \"Walk\" là động từ hiện tại, thiếu \"ed\" để thành \"walked\"."
                 }
             ]
+        },
+        "review": {
+            title: "Ôn tập Tổng hợp",
+            vocabulary: [
+                { word: "review", phonetic: "/rɪˈvjuː/", vietnamese: "ôn lại", example: "Review your lessons." },
+                { word: "practice", phonetic: "/ˈpræktɪs/", vietnamese: "luyện tập", example: "Practice English every day." },
+                { word: "remember", phonetic: "/rɪˈmembər/", vietnamese: "nhớ", example: "Remember new words." },
+                { word: "study", phonetic: "/ˈstʌdi/", vietnamese: "học", example: "Study hard every day." },
+                { word: "learn", phonetic: "/lɜːrn/", vietnamese: "học", example: "Learn English every day." },
+                { word: "repeat", phonetic: "/rɪˈpiːt/", vietnamese: "lặp lại", example: "Repeat after me." },
+                { word: "understand", phonetic: "/ˌʌndərˈstænd/", vietnamese: "hiểu", example: "I understand the lesson." },
+                { word: "improve", phonetic: "/ɪmˈpruːv/", vietnamese: "cải thiện", example: "Improve your English." }
+            ],
+            quiz: [
+                {
+                    question: "What does \"review\" mean?",
+                    options: ["A. Học mới", "B. Ôn lại", "C. Bỏ qua", "D. Quên"],
+                    correct: 1,
+                    explanation: "\"Review\" có nghĩa là ôn lại, xem lại những gì đã học."
+                },
+                {
+                    question: "How often should you practice English?",
+                    options: ["A. Once a month", "B. Once a week", "C. Every day", "D. Never"],
+                    correct: 2,
+                    explanation: "Nên luyện tập tiếng Anh mỗi ngày để cải thiện kỹ năng."
+                },
+                {
+                    question: "What's the best way to remember new words?",
+                    options: ["A. Look once", "B. Write and repeat", "C. Ignore them", "D. Copy only"],
+                    correct: 1,
+                    explanation: "Cách tốt nhất để nhớ từ mới là viết ra và lặp lại nhiều lần."
+                },
+                {
+                    question: "Chọn câu đúng:",
+                    options: ["A. I review my lesson yesterday.", "B. I reviewed my lesson yesterday.", "C. I reviewing my lesson yesterday."],
+                    correct: 1,
+                    explanation: "Câu ở thì quá khứ đơn, động từ \"review\" phải chia thành \"reviewed\"."
+                },
+                {
+                    question: "Why is practice important?",
+                    options: ["A. It's not important", "B. It helps you learn faster", "C. It's boring", "D. It's a waste of time"],
+                    correct: 1,
+                    explanation: "Luyện tập giúp bạn học nhanh hơn và nhớ lâu hơn."
+                },
+                {
+                    question: "What should you do before a test?",
+                    options: ["A. Sleep all day", "B. Play games", "C. Review lessons", "D. Watch TV"],
+                    correct: 2,
+                    explanation: "Trước khi thi, bạn nên ôn lại các bài học (review lessons)."
+                },
+                {
+                    question: "How to improve your English?",
+                    options: ["A. Do nothing", "B. Practice every day", "C. Study once a year", "D. Give up"],
+                    correct: 1,
+                    explanation: "Cải thiện tiếng Anh bằng cách luyện tập mỗi ngày."
+                },
+                {
+                    question: "What does \"understand\" mean?",
+                    options: ["A. Không biết", "B. Hiểu", "C. Quên", "D. Bỏ qua"],
+                    correct: 1,
+                    explanation: "\"Understand\" có nghĩa là hiểu, nắm được ý nghĩa."
+                }
+            ]
         }
     },
     mockTest: [
@@ -1448,7 +1511,7 @@ function speakText(text, event) {
     }
     
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    utterance.lang = 'en-GB';
     utterance.rate = 0.8;
     speechSynthesis.speak(utterance);
 }
