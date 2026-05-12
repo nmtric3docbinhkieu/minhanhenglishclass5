@@ -40,6 +40,7 @@
                 <button class="tab-btn active" data-tab="roadmap">📅 Học theo lộ trình</button>
                 <button class="tab-btn" data-tab="units">📚 Unit cần học</button>
                 <button class="tab-btn" data-tab="exercises">🎯 Bài tập mới</button>
+                <button class="tab-btn" data-tab="speaking">🎤 Speaking</button>
                 <button class="tab-btn" data-tab="mocktest">📝 Thi thử</button>
                 <button class="tab-btn" data-tab="errors">📝 Sổ tay lỗi sai</button>
             </div>
@@ -199,7 +200,211 @@
                     </div>
                 </div>
 
-                <!-- Tab 4: Mock Test -->
+                <!-- Tab 4: Speaking -->
+                <div class="tab-pane" id="speaking">
+                    <h2>Luyện thi Speaking</h2>
+                    <p class="section-desc">Luyện phát âm và nói các chủ đề quan trọng cho phần thi Speaking</p>
+                    
+                    <div class="speaking-topics">
+                        <!-- Topic 1: My Birthday Party -->
+                        <div class="speaking-topic">
+                            <div class="topic-header">
+                                <h3>🎂 CHỦ ĐỀ 1: My birthday party</h3>
+                                <div class="topic-keywords">
+                                    <strong>Từ khóa:</strong> birthday, food, drinks, fruits, games, cake, presents, sing, dance, friends
+                                </div>
+                            </div>
+                            
+                            <div class="topic-content">
+                                <div class="content-section">
+                                    <h4>🟢 Đoạn 1 - Dành cho học sinh yếu</h4>
+                                    
+                                    <div class="text-block">
+                                        <h5>Tiếng Anh:</h5>
+                                        <p class="english-text">My birthday is on Sunday. At my birthday party, I will have a big cake. I will have pizza, chicken, and chips. I will have water, apple juice, and milk. I will have fruits like bananas and apples. I will play games with my friends. We will sing and dance. I will get presents. I will be happy.</p>
+                                        
+                                        <h5>Tiếng Việt:</h5>
+                                        <p class="vietnamese-text">Sinh nhật của tôi vào Chủ nhật. Ở bữa tiệc sinh nhật của tôi, tôi sẽ có một chiếc bánh kem lớn. Tôi sẽ có pizza, gà và khoai tây chiên. Tôi sẽ có nước lọc, nước ép táo và sữa. Tôi sẽ có trái cây như chuối và táo. Tôi sẽ chơi trò chơi với các bạn của mình. Chúng tôi sẽ hát và nhảy. Tôi sẽ nhận được quà. Tôi sẽ rất vui.</p>
+                                        
+                                        <h5>Hướng dẫn phát âm:</h5>
+                                        <p class="pronunciation-guide">My birth-day is on Sun-day. At my birthday party, I will have a big cake. I will have piz-za, chick-en, and chips. I will have wa-ter, ap-ple juice, and milk. I will have fruits like ba-na-nas and ap-ples. I will play games with my friends. We will sing and dance. I will get pre-sents. I will be ha-ppy.</p>
+                                    </div>
+                                    
+                                    <div class="audio-controls">
+                                        <button class="btn btn-primary audio-btn" onclick="playSpeakingAudio('birthday', 'english')">
+                                            🔊 Nghe tiếng Anh
+                                        </button>
+                                        <button class="btn btn-secondary audio-btn" onclick="playSpeakingAudio('birthday', 'pronunciation')">
+                                            🔊 Nghe phát âm chậm
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="vocabulary-section">
+                                        <h4>📚 Từ vựng quan trọng</h4>
+                                        <div class="vocabulary-grid" id="birthday-vocabulary">
+                                            <!-- Vocabulary will be loaded by JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-section">
+                                    <h4>🎤 Luyện nói</h4>
+                                    <div class="practice-controls">
+                                        <button class="btn btn-success" onclick="startRecording('birthday')">
+                                            🎙️ Bắt đầu ghi âm
+                                        </button>
+                                        <button class="btn btn-warning" onclick="stopRecording()" id="stop-btn" style="display: none;">
+                                            ⏹️ Dừng ghi âm
+                                        </button>
+                                        <button class="btn btn-info" onclick="playRecording()" id="play-recording-btn" style="display: none;">
+                                            ▶️ Nghe lại
+                                        </button>
+                                    </div>
+                                    <div class="recording-status" id="recording-status"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 2: Health Problems -->
+                        <div class="speaking-topic">
+                            <div class="topic-header">
+                                <h3>🏥 CHỦ ĐỀ 2: Health problems and giving advice</h3>
+                                <div class="topic-keywords">
+                                    <strong>Từ khóa:</strong> headache, toothache, sore throat, should, shouldn't
+                                </div>
+                            </div>
+                            
+                            <div class="topic-content">
+                                <div class="content-section">
+                                    <h4>🟢 Đoạn 1 - Dành cho học sinh yếu</h4>
+                                    
+                                    <div class="text-block">
+                                        <h5>Tiếng Anh:</h5>
+                                        <p class="english-text">Minh has a headache. He should have a rest. He shouldn't watch too much TV. Linda has a toothache. She should go to the dentist. She shouldn't eat ice cream. Linh has a sore throat. She should drink warm water. She shouldn't eat spicy food.</p>
+                                        
+                                        <h5>Tiếng Việt:</h5>
+                                        <p class="vietnamese-text">Minh bị đau đầu. Cậu ấy nên nghỉ ngơi. Cậu ấy không nên xem TV quá nhiều. Linda bị đau răng. Cô ấy nên đi nha sĩ. Cô ấy không nên ăn kem. Linh bị đau họng. Cô ấy nên uống nước ấm. Cô ấy không nên ăn đồ cay.</p>
+                                        
+                                        <h5>Hướng dẫn phát âm:</h5>
+                                        <p class="pronunciation-guide">Minh has a head-ache. He should have a rest. He should-n't watch too much TV. Linda has a tooth-ache. She should go to the den-tist. She should-n't eat ice cream. Linh has a sore throat. She should drink warm water. She should-n't eat spi-cy food.</p>
+                                    </div>
+                                    
+                                    <div class="audio-controls">
+                                        <button class="btn btn-primary audio-btn" onclick="playSpeakingAudio('health', 'english')">
+                                            🔊 Nghe tiếng Anh
+                                        </button>
+                                        <button class="btn btn-secondary audio-btn" onclick="playSpeakingAudio('health', 'pronunciation')">
+                                            🔊 Nghe phát âm chậm
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="vocabulary-section">
+                                        <h4>📚 Từ vựng quan trọng</h4>
+                                        <div class="vocabulary-grid" id="health-vocabulary">
+                                            <!-- Vocabulary will be loaded by JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-section">
+                                    <h4>🎤 Luyện nói</h4>
+                                    <div class="practice-controls">
+                                        <button class="btn btn-success" onclick="startRecording('health')">
+                                            🎙️ Bắt đầu ghi âm
+                                        </button>
+                                        <button class="btn btn-warning" onclick="stopRecording()" id="stop-btn-health" style="display: none;">
+                                            ⏹️ Dừng ghi âm
+                                        </button>
+                                        <button class="btn btn-info" onclick="playRecording()" id="play-recording-btn-health" style="display: none;">
+                                            ▶️ Nghe lại
+                                        </button>
+                                    </div>
+                                    <div class="recording-status" id="recording-status-health"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Topic 3: Means of Transport -->
+                        <div class="speaking-topic">
+                            <div class="topic-header">
+                                <h3>🚌 CHỦ ĐỀ 3: Means of transport - A morning trip</h3>
+                                <div class="topic-keywords">
+                                    <strong>Từ khóa:</strong> want to visit, get there by, beautiful, interesting
+                                </div>
+                            </div>
+                            
+                            <div class="topic-content">
+                                <div class="content-section">
+                                    <h4>🟢 Đoạn 1 - Dành cho học sinh yếu</h4>
+                                    
+                                    <div class="text-block">
+                                        <h5>Tiếng Anh:</h5>
+                                        <p class="english-text">Today is Sunday. We want to visit the city zoo. We will get there by bus. The zoo is big and beautiful. We will see elephants, monkeys, and tigers. We will take photos. We will eat ice cream. We will go home in the afternoon. It will be a nice trip.</p>
+                                        
+                                        <h5>Tiếng Việt:</h5>
+                                        <p class="vietnamese-text">Hôm nay là Chủ nhật. Chúng tôi muốn thăm vườn bách thú trong thành phố. Chúng tôi sẽ đến đó bằng xe buýt. Vườn bách thú rộng và đẹp. Chúng tôi sẽ xem voi, khỉ và hổ. Chúng tôi sẽ chụp ảnh. Chúng tôi sẽ ăn kem. Chúng tôi sẽ về nhà vào buổi chiều. Đó sẽ là một chuyến đi vui vẻ.</p>
+                                        
+                                        <h5>Hướng dẫn phát âm:</h5>
+                                        <p class="pronunciation-guide">Today is Sun-day. We want to visit the city zoo. We will get there by bus. The zoo is big and beau-ti-ful. We will see e-le-phants, mon-keys, and ti-gers. We will take pho-tos. We will eat ice cream. We will go home in the after-noon. It will be a nice trip.</p>
+                                    </div>
+                                    
+                                    <div class="audio-controls">
+                                        <button class="btn btn-primary audio-btn" onclick="playSpeakingAudio('transport', 'english')">
+                                            🔊 Nghe tiếng Anh
+                                        </button>
+                                        <button class="btn btn-secondary audio-btn" onclick="playSpeakingAudio('transport', 'pronunciation')">
+                                            🔊 Nghe phát âm chậm
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="vocabulary-section">
+                                        <h4>📚 Từ vựng quan trọng</h4>
+                                        <div class="vocabulary-grid" id="transport-vocabulary">
+                                            <!-- Vocabulary will be loaded by JavaScript -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-section">
+                                    <h4>🎤 Luyện nói</h4>
+                                    <div class="practice-controls">
+                                        <button class="btn btn-success" onclick="startRecording('transport')">
+                                            🎙️ Bắt đầu ghi âm
+                                        </button>
+                                        <button class="btn btn-warning" onclick="stopRecording()" id="stop-btn-transport" style="display: none;">
+                                            ⏹️ Dừng ghi âm
+                                        </button>
+                                        <button class="btn btn-info" onclick="playRecording()" id="play-recording-btn-transport" style="display: none;">
+                                            ▶️ Nghe lại
+                                        </button>
+                                    </div>
+                                    <div class="recording-status" id="recording-status-transport"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Test Section -->
+                    <div class="speaking-test">
+                        <h3>📝 Kiểm tra phát âm</h3>
+                        <p>Nói lại từng từ trong ô dưới đây để kiểm tra xem bạn đã thuộc bài chưa:</p>
+                        
+                        <div class="test-input-area">
+                            <textarea id="speaking-test-input" placeholder="Nhập hoặc nói lại các từ đã học..." rows="4"></textarea>
+                            <div class="test-controls">
+                                <button class="btn btn-primary" onclick="checkSpeakingTest()">
+                                    ✅ Kiểm tra
+                                </button>
+                                <button class="btn btn-secondary" onclick="clearSpeakingTest()">
+                                    🗑️ Xóa
+                                </button>
+                            </div>
+                            <div id="speaking-test-result" class="test-result"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Mock Test -->
                 <div class="tab-pane" id="mocktest">
                     <h2>Đề thi thử học kỳ 2</h2>
                     <div class="mocktest-container">

@@ -1343,10 +1343,6 @@ let currentSentenceExerciseIndex = 0;
 let currentSentenceIndex = 0;
 let sentenceAnswers = [];
 
-// Initialize app
-document.addEventListener('DOMContentLoaded', function() {
-    initializeApp();
-});
 
 function initializeApp() {
     initializeCountdown();
@@ -3399,3 +3395,447 @@ function loadExerciseProgress(type, exerciseId) {
     
     return null;
 }
+
+// Speaking Section Functionality
+let mediaRecorder;
+let audioChunks = [];
+let currentRecordingTopic = '';
+let isRecording = false;
+
+// Speaking content data
+const speakingContent = {
+    birthday: {
+        english: "My birthday is on Sunday. At my birthday party, I will have a big cake. I will have pizza, chicken, and chips. I will have water, apple juice, and milk. I will have fruits like bananas and apples. I will play games with my friends. We will sing and dance. I will get presents. I will be happy.",
+        pronunciation: "My birth-day is on Sun-day. At my birthday party, I will have a big cake. I will have piz-za, chick-en, and chips. I will have wa-ter, ap-ple juice, and milk. I will have fruits like ba-na-nas and ap-ples. I will play games with my friends. We will sing and dance. I will get pre-sents. I will be ha-ppy.",
+        keywords: ["birthday", "food", "drinks", "fruits", "games", "cake", "presents", "sing", "dance", "friends"],
+        vocabulary: [
+            { word: "birthday", phonetic: "/ˈbɜːrθdeɪ/", vietnamese: "sinh nhật" },
+            { word: "cake", phonetic: "/keɪk/", vietnamese: "bánh kem" },
+            { word: "pizza", phonetic: "/ˈpiːtsə/", vietnamese: "pizza" },
+            { word: "chicken", phonetic: "/ˈtʃɪkɪn/", vietnamese: "gà" },
+            { word: "chips", phonetic: "/tʃɪps/", vietnamese: "khoai tây chiên" },
+            { word: "drinks", phonetic: "/drɪŋks/", vietnamese: "đồ uống" },
+            { word: "water", phonetic: "/ˈwɔːtər/", vietnamese: "nước lọc" },
+            { word: "apple juice", phonetic: "/ˈæpl dʒuːs/", vietnamese: "nước ép táo" },
+            { word: "milk", phonetic: "/mɪlk/", vietnamese: "sữa" },
+            { word: "fruits", phonetic: "/fruːts/", vietnamese: "trái cây" },
+            { word: "bananas", phonetic: "/bəˈnænəz/", vietnamese: "chuối" },
+            { word: "apples", phonetic: "/ˈæplz/", vietnamese: "táo" },
+            { word: "games", phonetic: "/ɡeɪmz/", vietnamese: "trò chơi" },
+            { word: "friends", phonetic: "/frendz/", vietnamese: "bạn bè" },
+            { word: "sing", phonetic: "/sɪŋ/", vietnamese: "hát" },
+            { word: "dance", phonetic: "/dæns/", vietnamese: "nhảy/múa" },
+            { word: "presents", phonetic: "/ˈpreznts/", vietnamese: "quà tặng" },
+            { word: "happy", phonetic: "/ˈhæpi/", vietnamese: "vui vẻ" }
+        ]
+    },
+    health: {
+        english: "Minh has a headache. He should have a rest. He shouldn't watch too much TV. Linda has a toothache. She should go to the dentist. She shouldn't eat ice cream. Linh has a sore throat. She should drink warm water. She shouldn't eat spicy food.",
+        pronunciation: "Minh has a head-ache. He should have a rest. He should-n't watch too much TV. Linda has a tooth-ache. She should go to the den-tist. She should-n't eat ice cream. Linh has a sore throat. She should drink warm water. She should-n't eat spi-cy food.",
+        keywords: ["headache", "toothache", "sore throat", "should", "shouldn't"],
+        vocabulary: [
+            { word: "headache", phonetic: "/ˈhedeɪk/", vietnamese: "đau đầu" },
+            { word: "toothache", phonetic: "/ˈtuːθeɪk/", vietnamese: "đau răng" },
+            { word: "sore throat", phonetic: "/sɔːr θroʊt/", vietnamese: "đau họng" },
+            { word: "should", phonetic: "/ʃʊd/", vietnamese: "nên" },
+            { word: "shouldn't", phonetic: "/ˈʃʊdnt/", vietnamese: "không nên" },
+            { word: "rest", phonetic: "/rest/", vietnamese: "nghỉ ngơi" },
+            { word: "watch", phonetic: "/wɒtʃ/", vietnamese: "xem" },
+            { word: "dentist", phonetic: "/ˈdentɪst/", vietnamese: "nha sĩ" },
+            { word: "ice cream", phonetic: "/aɪs kriːm/", vietnamese: "kem" },
+            { word: "warm", phonetic: "/wɔːrm/", vietnamese: "ấm" },
+            { word: "spicy", phonetic: "/ˈspaɪsi/", vietnamese: "cay" },
+            { word: "food", phonetic: "/fuːd/", vietnamese: "đồ ăn" }
+        ]
+    },
+    transport: {
+        english: "Today is Sunday. We want to visit the city zoo. We will get there by bus. The zoo is big and beautiful. We will see elephants, monkeys, and tigers. We will take photos. We will eat ice cream. We will go home in the afternoon. It will be a nice trip.",
+        pronunciation: "Today is Sun-day. We want to visit the city zoo. We will get there by bus. The zoo is big and beau-ti-ful. We will see e-le-phants, mon-keys, and ti-gers. We will take pho-tos. We will eat ice cream. We will go home in the after-noon. It will be a nice trip.",
+        keywords: ["want to visit", "get there by", "beautiful", "interesting"],
+        vocabulary: [
+            { word: "today", phonetic: "/təˈdeɪ/", vietnamese: "hôm nay" },
+            { word: "Sunday", phonetic: "/ˈsʌndeɪ/", vietnamese: "Chủ nhật" },
+            { word: "want to", phonetic: "/wɒnt tuː/", vietnamese: "muốn" },
+            { word: "visit", phonetic: "/ˈvɪzɪt/", vietnamese: "thăm" },
+            { word: "city", phonetic: "/ˈsɪti/", vietnamese: "thành phố" },
+            { word: "zoo", phonetic: "/zuː/", vietnamese: "vườn bách thú" },
+            { word: "get there", phonetic: "/ɡet ðeər/", vietnamese: "đến đó" },
+            { word: "by bus", phonetic: "/baɪ bʌs/", vietnamese: "bằng xe buýt" },
+            { word: "beautiful", phonetic: "/ˈbjuːtɪfl/", vietnamese: "đẹp" },
+            { word: "big", phonetic: "/bɪɡ/", vietnamese: "to, lớn" },
+            { word: "elephants", phonetic: "/ˈelɪfənts/", vietnamese: "voi" },
+            { word: "monkeys", phonetic: "/ˈmʌŋkiz/", vietnamese: "khỉ" },
+            { word: "tigers", phonetic: "/ˈtaɪɡərz/", vietnamese: "hổ" },
+            { word: "photos", phonetic: "/ˈfoʊtoʊz/", vietnamese: "bức ảnh" },
+            { word: "take photos", phonetic: "/teɪk foʊtoʊz/", vietnamese: "chụp ảnh" },
+            { word: "afternoon", phonetic: "/ˌæftərˈnuːn/", vietnamese: "buổi chiều" },
+            { word: "home", phonetic: "/hoʊm/", vietnamese: "nhà" },
+            { word: "nice", phonetic: "/naɪs/", vietnamese: "tốt, đẹp" },
+            { word: "trip", phonetic: "/trɪp/", vietnamese: "chuyến đi" }
+        ]
+    }
+};
+
+// Initialize Web Speech API for text-to-speech
+function initSpeechSynthesis() {
+    if ('speechSynthesis' in window) {
+        console.log('Speech synthesis available');
+        return true;
+    } else {
+        console.log('Speech synthesis not supported');
+        return false;
+    }
+}
+
+// Play speaking audio using text-to-speech
+function playSpeakingAudio(topic, type) {
+    if (!initSpeechSynthesis()) {
+        alert('Trình duyệt của bạn không hỗ trợ phát âm. Vui lòng sử dụng Chrome hoặc Edge.');
+        return;
+    }
+    
+    const content = speakingContent[topic];
+    if (!content) {
+        console.error('Topic not found:', topic);
+        return;
+    }
+    
+    const text = type === 'english' ? content.english : content.pronunciation;
+    
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
+    
+    const utterance = new SpeechSynthesisUtterance(text);
+    
+    // Configure voice settings for better intonation
+    utterance.lang = 'en-US';
+    utterance.rate = type === 'english' ? 0.9 : 0.6; // Slightly slower for clarity
+    utterance.pitch = 1.1; // Slightly higher pitch for clearer sound
+    utterance.volume = 1.0;
+    
+    // Try to find the best voice for learning
+    const voices = window.speechSynthesis.getVoices();
+    
+    // Priority order for voice selection
+    const preferredVoices = [
+        // Google voices (usually good quality)
+        voices.find(voice => voice.name.includes('Google') && voice.lang.includes('en-US')),
+        voices.find(voice => voice.name.includes('Google') && voice.lang.includes('en')),
+        // Microsoft voices (good clarity)
+        voices.find(voice => voice.name.includes('Microsoft') && voice.name.includes('Zira')),
+        voices.find(voice => voice.name.includes('Microsoft') && voice.lang.includes('en-US')),
+        // Amazon voices
+        voices.find(voice => voice.name.includes('Amazon') && voice.name.includes('Joanna')),
+        voices.find(voice => voice.name.includes('Amazon') && voice.lang.includes('en-US')),
+        // Female voices (generally clearer for learning)
+        voices.find(voice => voice.lang.includes('en-US') && voice.name.includes('Female')),
+        voices.find(voice => voice.lang.includes('en') && voice.name.includes('Female')),
+        // Any US English voice
+        voices.find(voice => voice.lang.includes('en-US')),
+        voices.find(voice => voice.lang.includes('en'))
+    ].filter(Boolean); // Remove undefined entries
+    
+    if (preferredVoices.length > 0) {
+        utterance.voice = preferredVoices[0];
+        console.log('Using voice:', preferredVoices[0].name);
+    }
+    
+    // Add pauses for punctuation (better rhythm)
+    if (type === 'english') {
+        utterance.text = text.replace(/([.!?])/g, '$1 ');
+    }
+    
+    // Add visual feedback
+    const button = event.target;
+    const originalText = button.textContent;
+    button.textContent = '🔊 Đang phát...';
+    button.disabled = true;
+    
+    utterance.onend = function() {
+        button.textContent = originalText;
+        button.disabled = false;
+    };
+    
+    utterance.onerror = function(event) {
+        console.error('Speech synthesis error:', event);
+        button.textContent = originalText;
+        button.disabled = false;
+        alert('Lỗi phát âm. Vui lòng thử lại.');
+    };
+    
+    window.speechSynthesis.speak(utterance);
+}
+
+// Load vocabulary for speaking topics
+function loadVocabulary() {
+    const topics = ['birthday', 'health', 'transport'];
+    
+    topics.forEach(topic => {
+        const container = document.getElementById(`${topic}-vocabulary`);
+        if (!container) return;
+        
+        const vocabulary = speakingContent[topic].vocabulary;
+        container.innerHTML = '';
+        
+        vocabulary.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'vocabulary-card';
+            card.innerHTML = `
+                <div class="vocabulary-word">${item.word}</div>
+                <div class="vocabulary-phonetic">${item.phonetic}</div>
+                <div class="vocabulary-meaning">${item.vietnamese}</div>
+                <button class="vocabulary-audio" onclick="playVocabularyAudio('${item.word}', '${topic}')">
+                    🔊 Nghe
+                </button>
+            `;
+            container.appendChild(card);
+        });
+    });
+}
+
+// Play individual vocabulary word audio
+function playVocabularyAudio(word, topic) {
+    if (!initSpeechSynthesis()) {
+        alert('Trình duyệt của bạn không hỗ trợ phát âm. Vui lòng sử dụng Chrome hoặc Edge.');
+        return;
+    }
+    
+    // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
+    
+    const utterance = new SpeechSynthesisUtterance(word);
+    
+    // Configure for single word pronunciation
+    utterance.lang = 'en-US';
+    utterance.rate = 0.7; // Slower for vocabulary
+    utterance.pitch = 1.2; // Higher pitch for clarity
+    utterance.volume = 1.0;
+    
+    // Use same voice selection logic
+    const voices = window.speechSynthesis.getVoices();
+    const preferredVoices = [
+        voices.find(voice => voice.name.includes('Google') && voice.lang.includes('en-US')),
+        voices.find(voice => voice.name.includes('Microsoft') && voice.name.includes('Zira')),
+        voices.find(voice => voice.name.includes('Amazon') && voice.name.includes('Joanna')),
+        voices.find(voice => voice.lang.includes('en-US') && voice.name.includes('Female')),
+        voices.find(voice => voice.lang.includes('en-US'))
+    ].filter(Boolean);
+    
+    if (preferredVoices.length > 0) {
+        utterance.voice = preferredVoices[0];
+    }
+    
+    // Visual feedback
+    const button = event.target;
+    const originalText = button.textContent;
+    button.textContent = '🔊...';
+    button.disabled = true;
+    
+    utterance.onend = function() {
+        button.textContent = originalText;
+        button.disabled = false;
+    };
+    
+    utterance.onerror = function() {
+        button.textContent = originalText;
+        button.disabled = false;
+    };
+    
+    window.speechSynthesis.speak(utterance);
+}
+
+// Start recording functionality
+async function startRecording(topic) {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        
+        mediaRecorder = new MediaRecorder(stream);
+        audioChunks = [];
+        currentRecordingTopic = topic;
+        isRecording = true;
+        
+        mediaRecorder.ondataavailable = function(event) {
+            audioChunks.push(event.data);
+        };
+        
+        mediaRecorder.onstop = function() {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            
+            // Store the recording for playback
+            const audio = new Audio(audioUrl);
+            window.lastRecording = audio;
+            
+            // Update UI
+            updateRecordingUI(topic, 'ready');
+            
+            // Enable play button
+            const playBtn = document.getElementById(`play-recording-btn${topic !== 'birthday' ? '-' + topic : ''}`);
+            if (playBtn) {
+                playBtn.style.display = 'inline-flex';
+            }
+        };
+        
+        mediaRecorder.start();
+        updateRecordingUI(topic, 'recording');
+        
+        // Update button states
+        const stopBtn = document.getElementById(`stop-btn${topic !== 'birthday' ? '-' + topic : ''}`);
+        if (stopBtn) {
+            stopBtn.style.display = 'inline-flex';
+        }
+        
+        event.target.style.display = 'none';
+        
+    } catch (error) {
+        console.error('Error accessing microphone:', error);
+        alert('Không thể truy cập micro. Vui lòng kiểm tra quyền micro trong trình duyệt.');
+    }
+}
+
+// Stop recording functionality
+function stopRecording() {
+    if (mediaRecorder && isRecording) {
+        mediaRecorder.stop();
+        isRecording = false;
+        
+        // Stop all tracks
+        mediaRecorder.stream.getTracks().forEach(track => track.stop());
+        
+        // Hide stop button, show start button
+        const topic = currentRecordingTopic;
+        const stopBtn = document.getElementById(`stop-btn${topic !== 'birthday' ? '-' + topic : ''}`);
+        const startBtn = document.querySelector(`button[onclick="startRecording('${topic}')"]`);
+        
+        if (stopBtn) {
+            stopBtn.style.display = 'none';
+        }
+        if (startBtn) {
+            startBtn.style.display = 'inline-flex';
+        }
+    }
+}
+
+// Play last recording
+function playRecording() {
+    if (window.lastRecording) {
+        window.lastRecording.play();
+    } else {
+        alert('Chưa có bản ghi âm nào. Vui lòng ghi âm trước.');
+    }
+}
+
+// Update recording UI
+function updateRecordingUI(topic, status) {
+    const statusElement = document.getElementById(`recording-status${topic !== 'birthday' ? '-' + topic : ''}`);
+    if (statusElement) {
+        statusElement.className = 'recording-status';
+        
+        if (status === 'recording') {
+            statusElement.classList.add('recording');
+            statusElement.textContent = '🔴 Đang ghi âm...';
+        } else if (status === 'ready') {
+            statusElement.classList.add('ready');
+            statusElement.textContent = '✅ Bản ghi âm đã sẵn sàng. Nhấn "Nghe lại" để xem.';
+        } else {
+            statusElement.textContent = '';
+        }
+    }
+}
+
+// Check speaking test
+function checkSpeakingTest() {
+    const input = document.getElementById('speaking-test-input').value.trim().toLowerCase();
+    const resultDiv = document.getElementById('speaking-test-result');
+    
+    if (!input) {
+        showTestResult('Vui lòng nhập hoặc nói lại các từ đã học.', 'error');
+        return;
+    }
+    
+    // Collect all keywords from all topics
+    const allKeywords = [
+        ...speakingContent.birthday.keywords,
+        ...speakingContent.health.keywords,
+        ...speakingContent.transport.keywords
+    ];
+    
+    // Check how many keywords are present in the input
+    const foundKeywords = allKeywords.filter(keyword => 
+        input.includes(keyword.toLowerCase())
+    );
+    
+    const percentage = Math.round((foundKeywords.length / allKeywords.length) * 100);
+    
+    if (percentage >= 70) {
+        showTestResult(`Tuyệt vời! Bạn đã thuộc ${foundKeywords.length}/${allKeywords.length} từ khóa (${percentage}%).`, 'success');
+    } else if (percentage >= 40) {
+        showTestResult(`Khá tốt! Bạn đã thuộc ${foundKeywords.length}/${allKeywords.length} từ khóa (${percentage}%). Hãy cố gắng thêm nhé!`, 'error');
+    } else {
+        showTestResult(`Cần cố gắng thêm! Bạn chỉ thuộc ${foundKeywords.length}/${allKeywords.length} từ khóa (${percentage}%). Hãy luyện tập thêm nhé.`, 'error');
+    }
+    
+    // Show which keywords were found
+    if (foundKeywords.length > 0) {
+        const keywordsList = foundKeywords.map(k => `<span class="keyword-found">${k}</span>`).join(', ');
+        resultDiv.innerHTML += `<p><strong>Từ khóa đã tìm thấy:</strong> ${keywordsList}</p>`;
+    }
+}
+
+// Show test result
+function showTestResult(message, type) {
+    const resultDiv = document.getElementById('speaking-test-result');
+    resultDiv.className = `test-result ${type} show`;
+    resultDiv.innerHTML = `<p>${message}</p>`;
+}
+
+// Clear speaking test
+function clearSpeakingTest() {
+    document.getElementById('speaking-test-input').value = '';
+    const resultDiv = document.getElementById('speaking-test-result');
+    resultDiv.className = 'test-result';
+    resultDiv.innerHTML = '';
+}
+
+// Initialize speech synthesis when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize main app first
+    initializeApp();
+    
+    // Load voices for speech synthesis
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+        
+        // Some browsers need this to be called after a delay
+        setTimeout(() => {
+            window.speechSynthesis.getVoices();
+            loadVocabulary(); // Load vocabulary after voices are ready
+        }, 100);
+    } else {
+        // Load vocabulary even if speech synthesis is not available
+        loadVocabulary();
+    }
+});
+
+// Add keyboard shortcuts for speaking section
+document.addEventListener('keydown', function(event) {
+    // Ctrl+Space to start/stop recording
+    if (event.ctrlKey && event.code === 'Space') {
+        event.preventDefault();
+        if (isRecording) {
+            stopRecording();
+        } else {
+            // Find the first visible speaking topic and start recording
+            const speakingTab = document.getElementById('speaking');
+            if (speakingTab && speakingTab.classList.contains('active')) {
+                const firstTopic = document.querySelector('.speaking-topic');
+                if (firstTopic) {
+                    const startBtn = firstTopic.querySelector('button[onclick^="startRecording"]');
+                    if (startBtn) {
+                        startBtn.click();
+                    }
+                }
+            }
+        }
+    }
+});

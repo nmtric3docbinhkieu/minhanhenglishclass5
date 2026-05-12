@@ -1371,3 +1371,378 @@ body {
         width: 100%;
     }
 }
+
+/* Speaking Section Styles */
+.speaking-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.speaking-topic {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(255, 183, 178, 0.15);
+    border: 2px solid #FFE5E5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaking-topic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(255, 183, 178, 0.25);
+}
+
+.topic-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #F9E7E7;
+}
+
+.topic-header h3 {
+    color: #FF6B6B;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topic-keywords {
+    background: #FFF0F5;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.topic-keywords strong {
+    color: #FF8A80;
+}
+
+.topic-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.content-section h4 {
+    color: #FF8A80;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-block {
+    background: #FAFAFA;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #FFB7B2;
+}
+
+.text-block h5 {
+    color: #FF6B6B;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.text-block h5:first-child {
+    margin-top: 0;
+}
+
+.english-text {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #FFE5E5;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.vietnamese-text {
+    background: #F0F8FF;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #E6F3FF;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.pronunciation-guide {
+    background: #FFF9E6;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #FFE5B4;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #666;
+    font-style: italic;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.audio-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.practice-section {
+    background: #F0FFF4;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #E8F5E8;
+}
+
+.practice-section h4 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.practice-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.recording-status {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: #FAFAFA;
+    border: 1px solid #E0E0E0;
+}
+
+.recording-status.recording {
+    background: #FFE5E5;
+    border-color: #FF6B6B;
+    color: #FF6B6B;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.recording-status.ready {
+    background: #E8F5E8;
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+/* Speaking Test Section */
+.speaking-test {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 8px 32px rgba(255, 183, 178, 0.15);
+    border: 2px solid #FFE5E5;
+}
+
+.speaking-test h3 {
+    color: #FF6B6B;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.speaking-test p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.test-input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#speaking-test-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #FFE5E5;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    transition: border-color 0.3s ease;
+}
+
+#speaking-test-input:focus {
+    outline: none;
+    border-color: #FF8A80;
+    box-shadow: 0 0 0 3px rgba(255, 138, 128, 0.1);
+}
+
+.test-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.test-result {
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-weight: 500;
+    display: none;
+}
+
+.test-result.success {
+    background: #E8F5E8;
+    border: 2px solid #4CAF50;
+    color: #2E7D32;
+}
+
+.test-result.error {
+    background: #FFE5E5;
+    border: 2px solid #FF6B6B;
+    color: #C62828;
+}
+
+.test-result.show {
+    display: block;
+}
+
+.keyword-found {
+    background: #E8F5E8;
+    color: #2E7D32;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+/* Vocabulary Section Styles */
+.vocabulary-section {
+    background: #F8F9FA;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #E9ECEF;
+    margin-top: 20px;
+}
+
+.vocabulary-section h4 {
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vocabulary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.vocabulary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #E9ECEF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.vocabulary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    border-color: #FFB7B2;
+}
+
+.vocabulary-word {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FF6B6B;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vocabulary-phonetic {
+    font-size: 0.9rem;
+    color: #6C757D;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.vocabulary-meaning {
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.vocabulary-audio {
+    background: #FFB7B2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vocabulary-audio:hover {
+    background: #FF8A80;
+}
+
+.vocabulary-audio:disabled {
+    background: #CCC;
+    cursor: not-allowed;
+}
+
+/* Responsive for Speaking Section */
+@media (max-width: 768px) {
+    .speaking-topic {
+        padding: 20px;
+    }
+    
+    .topic-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .audio-controls {
+        justify-content: center;
+    }
+    
+    .practice-controls {
+        justify-content: center;
+    }
+    
+    .test-controls {
+        justify-content: center;
+    }
+    
+    .text-block {
+        padding: 15px;
+    }
+    
+    .english-text,
+    .vietnamese-text,
+    .pronunciation-guide {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
